@@ -1,1450 +1,348 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>TECNOS PRIME | Tecnologia e Projetos</title>
-
-    <meta name="description" content="A Tecnos Prime desenvolve projetos, especifica equipamentos e soluções técnicas para empresas. Tecnologia, infraestrutura, redes, datacenters, audiovisual e CFTV.">
-
-    <meta name="theme-color" content="#081A33">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-
-        /* =====================================================
-           IDENTIDADE VISUAL
-        ===================================================== */
-
-        :root {
-            --navy: #081A33;
-            --navy-2: #102947;
-            --cyan: #00D9FF;
-            --white: #FFFFFF;
-            --off-white: #F5F7FA;
-            --text: #263445;
-            --muted: #687789;
-            --border: #E3E8EE;
-
-            --container: 1180px;
-            --radius: 10px;
-            --transition: .25s ease;
-        }
-
-
-        /* =====================================================
-           RESET
-        ===================================================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 82px;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text);
-            background: var(--white);
-            line-height: 1.65;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        button {
-            font-family: inherit;
-        }
-
-        .container {
-            width: min(var(--container), calc(100% - 40px));
-            margin: 0 auto;
-        }
-
-
-        /* =====================================================
-           HEADER
-        ===================================================== */
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-
-            background: rgba(8, 26, 51, .96);
-            backdrop-filter: blur(10px);
-
-            border-bottom: 1px solid rgba(255,255,255,.08);
-        }
-
-        .navbar {
-            height: 78px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .brand {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand-name {
-            color: var(--white);
-            font-size: 1.35rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-        }
-
-        .brand-sub {
-            color: var(--cyan);
-            font-size: .65rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: #DCE5EF;
-            font-size: .85rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--cyan);
-        }
-
-        .nav-cta {
-            padding: .65rem 1.1rem;
-            border: 1px solid var(--cyan);
-            border-radius: 5px;
-            color: var(--cyan) !important;
-        }
-
-        .nav-cta:hover {
-            background: var(--cyan);
-            color: var(--navy) !important;
-        }
-
-
-        /* =====================================================
-           HERO
-        ===================================================== */
-
-        .hero {
-            min-height: 720px;
-            height: 100vh;
-            max-height: 900px;
-
-            display: flex;
-            align-items: center;
-
-            background:
-                radial-gradient(circle at 85% 50%, rgba(0,217,255,.10), transparent 35%),
-                linear-gradient(135deg, var(--navy), var(--navy-2));
-
-            color: var(--white);
-            padding-top: 78px;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.1fr .9fr;
-            align-items: center;
-            gap: 5rem;
-        }
-
-        .hero-content {
-            max-width: 720px;
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-
-            color: var(--cyan);
-            font-size: .78rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-
-            margin-bottom: 1.5rem;
-        }
-
-        .eyebrow::before {
-            content: "";
-            width: 28px;
-            height: 2px;
-            background: var(--cyan);
-        }
-
-        .hero h1 {
-            font-size: clamp(2.7rem, 5vw, 4.4rem);
-            line-height: 1.08;
-            letter-spacing: -2px;
-            margin-bottom: 1.6rem;
-        }
-
-        .hero h1 span {
-            color: var(--cyan);
-        }
-
-        .hero p {
-            max-width: 650px;
-
-            color: #C8D3DF;
-            font-size: 1.12rem;
-            line-height: 1.8;
-
-            margin-bottom: 2.3rem;
-        }
-
-        .hero-buttons {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: .95rem 1.6rem;
-
-            border-radius: 5px;
-
-            font-size: .9rem;
-            font-weight: 600;
-
-            transition: var(--transition);
-        }
-
-        .btn-primary {
-            background: var(--cyan);
-            color: var(--navy);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0,217,255,.20);
-        }
-
-        .btn-secondary {
-            border: 1px solid rgba(255,255,255,.25);
-            color: var(--white);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--cyan);
-            color: var(--cyan);
-        }
-
-        .hero-visual {
-            position: relative;
-            height: 400px;
-        }
-
-        .visual-box {
-            position: absolute;
-            inset: 20px 0 20px 40px;
-
-            border: 1px solid rgba(0,217,255,.25);
-            border-radius: 14px;
-
-            background:
-                linear-gradient(135deg,
-                rgba(255,255,255,.04),
-                rgba(0,217,255,.03));
-
-            overflow: hidden;
-        }
-
-        .visual-box::before {
-            content: "";
-
-            position: absolute;
-            width: 320px;
-            height: 320px;
-
-            border: 1px solid rgba(0,217,255,.12);
-            border-radius: 50%;
-
-            top: 50%;
-            left: 50%;
-
-            transform: translate(-50%, -50%);
-        }
-
-        .visual-box::after {
-            content: "";
-
-            position: absolute;
-            width: 180px;
-            height: 180px;
-
-            border: 1px solid rgba(0,217,255,.18);
-            border-radius: 50%;
-
-            top: 50%;
-            left: 50%;
-
-            transform: translate(-50%, -50%);
-        }
-
-        .visual-label {
-            position: absolute;
-            left: 35px;
-            bottom: 30px;
-
-            color: rgba(255,255,255,.55);
-
-            font-size: .72rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-
-        /* =====================================================
-           SEÇÃO INTRODUTÓRIA
-        ===================================================== */
-
-        .intro {
-            padding: 90px 0;
-            background: var(--white);
-        }
-
-        .intro-content {
-            max-width: 820px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .section-label {
-            color: #178CA3;
-            font-size: .75rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-
-            margin-bottom: 1rem;
-        }
-
-        .intro h2,
-        .section-header h2,
-        .about h2 {
-            color: var(--navy);
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            line-height: 1.2;
-            letter-spacing: -1px;
-            margin-bottom: 1.2rem;
-        }
-
-        .intro p {
-            color: var(--muted);
-            font-size: 1.08rem;
-        }
-
-
-        /* =====================================================
-           SERVIÇOS
-        ===================================================== */
-
-        .solutions {
-            padding: 100px 0;
-            background: var(--off-white);
-        }
-
-        .section-header {
-            max-width: 720px;
-            margin-bottom: 3.5rem;
-        }
-
-        .section-header p {
-            color: var(--muted);
-            font-size: 1rem;
-        }
-
-        .solutions-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.4rem;
-        }
-
-        .solution-card {
-            background: var(--white);
-
-            padding: 2rem;
-
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-
-            transition: var(--transition);
-        }
-
-        .solution-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0,217,255,.5);
-            box-shadow: 0 15px 40px rgba(8,26,51,.08);
-        }
-
-        .card-number {
-            color: var(--cyan);
-            font-size: .75rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-
-            margin-bottom: 1.5rem;
-        }
-
-        .solution-card h3 {
-            color: var(--navy);
-            font-size: 1.15rem;
-            margin-bottom: .8rem;
-        }
-
-        .solution-card p {
-            color: var(--muted);
-            font-size: .92rem;
-        }
-
-
-        /* =====================================================
-           COMO FUNCIONA
-        ===================================================== */
-
-        .process {
-            padding: 100px 0;
-            background: var(--white);
-        }
-
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 0;
-            margin-top: 4rem;
-        }
-
-        .process-step {
-            position: relative;
-            padding: 0 1.2rem;
-            text-align: center;
-        }
-
-        .process-step:not(:last-child)::after {
-            content: "";
-
-            position: absolute;
-            top: 25px;
-            left: 65%;
-            width: 70%;
-            height: 1px;
-
-            background: var(--border);
-        }
-
-        .step-number {
-            position: relative;
-            z-index: 2;
-
-            width: 50px;
-            height: 50px;
-
-            margin: 0 auto 1.3rem;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: var(--navy);
-            color: var(--cyan);
-
-            font-weight: 700;
-            font-size: .85rem;
-        }
-
-        .process-step h3 {
-            color: var(--navy);
-            font-size: .95rem;
-            margin-bottom: .5rem;
-        }
-
-        .process-step p {
-            color: var(--muted);
-            font-size: .82rem;
-        }
-
-
-        /* =====================================================
-           SOBRE
-        ===================================================== */
-
-        .about {
-            padding: 100px 0;
-            background: var(--navy);
-            color: var(--white);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-        }
-
-        .about h2 {
-            color: var(--white);
-        }
-
-        .about-text {
-            color: #C3CFDB;
-            font-size: 1rem;
-            margin-bottom: 1.3rem;
-        }
-
-        .about-list {
-            margin-top: 2rem;
-        }
-
-        .about-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-
-            color: #E1E8EF;
-            font-size: .95rem;
-
-            margin-bottom: 1rem;
-        }
-
-        .about-list li::before {
-            content: "✓";
-            color: var(--cyan);
-            font-weight: 700;
-        }
-
-        .about-card {
-            padding: 3rem;
-
-            border: 1px solid rgba(0,217,255,.2);
-            border-radius: 12px;
-
-            background: rgba(255,255,255,.035);
-        }
-
-        .about-card strong {
-            display: block;
-
-            color: var(--cyan);
-            font-size: 2.7rem;
-            line-height: 1;
-
-            margin-bottom: .7rem;
-        }
-
-        .about-card p {
-            color: #B9C6D3;
-            font-size: .92rem;
-        }
-
-        .about-card + .about-card {
-            margin-top: 1rem;
-        }
-
-
-        /* =====================================================
-           CTA
-        ===================================================== */
-
-        .cta {
-            padding: 90px 0;
-            background: var(--off-white);
-        }
-
-        .cta-box {
-            padding: 4rem;
-
-            background: var(--white);
-
-            border: 1px solid var(--border);
-            border-radius: 12px;
-
-            text-align: center;
-
-            box-shadow: 0 15px 50px rgba(8,26,51,.06);
-        }
-
-        .cta-box h2 {
-            color: var(--navy);
-            font-size: clamp(2rem, 4vw, 2.7rem);
-            margin-bottom: 1rem;
-        }
-
-        .cta-box p {
-            max-width: 650px;
-            margin: 0 auto 2rem;
-
-            color: var(--muted);
-        }
-
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        footer {
-            background: var(--navy);
-            color: var(--white);
-            padding: 70px 0 25px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr 1fr;
-            gap: 4rem;
-
-            padding-bottom: 3rem;
-        }
-
-        .footer-description {
-            max-width: 360px;
-            color: #9EADBD;
-            font-size: .9rem;
-            margin-top: 1rem;
-        }
-
-        .footer-title {
-            color: var(--cyan);
-            font-size: .78rem;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-
-            margin-bottom: 1.2rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: .7rem;
-        }
-
-        .footer-links a,
-        .footer-contact {
-            color: #AAB7C5;
-            font-size: .9rem;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--cyan);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,.08);
-
-            padding-top: 1.5rem;
-
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-
-            color: #748396;
-            font-size: .75rem;
-        }
-
-
-        /* =====================================================
-           RESPONSIVIDADE
-        ===================================================== */
-
-        @media (max-width: 900px) {
-
-            .hero-grid,
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                height: auto;
-                min-height: 760px;
-                padding: 130px 0 80px;
-            }
-
-            .hero-visual {
-                display: none;
-            }
-
-            .solutions-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .process-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .process-step {
-                text-align: left;
-                display: grid;
-                grid-template-columns: 50px 1fr;
-                column-gap: 1rem;
-                padding: 0;
-            }
-
-            .step-number {
-                grid-row: span 2;
-                margin: 0;
-            }
-
-            .process-step:not(:last-child)::after {
-                display: none;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-
-        @media (max-width: 650px) {
-
-            .container {
-                width: min(var(--container), calc(100% - 28px));
-            }
-
-            .navbar {
-                height: 70px;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .brand-name {
-                font-size: 1.15rem;
-            }
-
-            .hero {
-                min-height: 700px;
-                padding-top: 100px;
-            }
-
-            .hero h1 {
-                letter-spacing: -1px;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .btn {
-                width: 100%;
-            }
-
-            .solutions-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .intro,
-            .solutions,
-            .process,
-            .about {
-                padding: 70px 0;
-            }
-
-            .cta {
-                padding: 60px 0;
-            }
-
-            .cta-box {
-                padding: 2.5rem 1.5rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TECNOS PRIME | Tecnologia e Projetos</title>
+<meta name="description" content="Tecnos Prime — consultoria, projetos e soluções tecnológicas para empresas.">
+<meta name="theme-color" content="#071b35">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#061a33; --navy2:#0a2949; --cyan:#00d9ff; --blue:#168fd0;
+  --white:#fff; --bg:#f5f8fb; --text:#17263a; --muted:#687789;
+  --line:#dfe7ef; --shadow:0 18px 45px rgba(7,27,53,.10);
+  --max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(var(--max),calc(100% - 36px));margin:auto}
+
+/* Header */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,20,40,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+.navbar{height:78px;display:flex;align-items:center;justify-content:space-between}
+.logo{width:190px;height:auto;object-fit:contain;object-position:left center}
+.nav{display:flex;align-items:center;gap:28px;color:#e8f0f7;font-size:.82rem;font-weight:600}
+.nav a{transition:.2s}
+.nav a:hover{color:var(--cyan)}
+.nav .cta{background:var(--cyan);color:var(--navy);padding:10px 17px;border-radius:5px}
+.menu{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+
+/* Hero */
+.hero{min-height:760px;padding:130px 0 70px;display:flex;align-items:center;color:#fff;
+background:linear-gradient(90deg,rgba(3,16,31,.95) 0%,rgba(3,16,31,.72) 48%,rgba(3,16,31,.40) 100%),
+url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2200&q=85") center/cover}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.kicker{color:var(--cyan);text-transform:uppercase;letter-spacing:2.2px;font-size:.72rem;font-weight:800;margin-bottom:18px}
+.hero h1{font-size:clamp(2.8rem,5.5vw,5rem);line-height:1.02;letter-spacing:-2.5px;margin-bottom:22px;max-width:650px}
+.hero h1 span{color:var(--cyan)}
+.hero p{font-size:1.05rem;color:#d4e0eb;max-width:590px;margin-bottom:30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:5px;font-size:.85rem;font-weight:700;transition:.25s}
+.primary{background:var(--cyan);color:var(--navy)}
+.primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,217,255,.2)}
+.secondary{border:1px solid rgba(255,255,255,.5);color:#fff}
+.secondary:hover{border-color:var(--cyan);color:var(--cyan)}
+.hero-panel{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hero-stat{padding:24px;background:rgba(5,20,40,.58);border:1px solid rgba(0,217,255,.18);backdrop-filter:blur(5px);border-radius:9px}
+.hero-stat strong{display:block;color:var(--cyan);font-size:1.7rem;margin-bottom:3px}
+.hero-stat span{font-size:.78rem;color:#d7e2ec}
+
+/* Trust strip */
+.trust{background:var(--navy);color:#fff}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:22px 18px;border-right:1px solid rgba(255,255,255,.09)}
+.trust-item:last-child{border-right:0}
+.trust-item strong{display:block;color:#fff;font-size:.9rem}
+.trust-item span{color:#9fb0c2;font-size:.72rem}
+
+/* Generic sections */
+section{position:relative}
+.section{padding:92px 0}
+.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:40px}
+.section-head > div{max-width:650px}
+.eyebrow{color:#0d91bd;text-transform:uppercase;font-size:.7rem;font-weight:800;letter-spacing:1.7px;margin-bottom:10px}
+h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.12;letter-spacing:-1.3px;color:var(--navy)}
+.section-head p{max-width:420px;color:var(--muted);font-size:.9rem}
+
+/* Solutions */
+.solutions{background:var(--bg)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(7,27,53,.04);transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#b9d9e5}
+.card-image{height:180px;overflow:hidden}
+.card-image img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.card:hover .card-image img{transform:scale(1.04)}
+.card-body{padding:22px}
+.card-body h3{font-size:1.05rem;color:var(--navy);margin-bottom:7px}
+.card-body p{font-size:.82rem;color:var(--muted)}
+.card-tag{display:inline-block;margin-bottom:12px;color:#0789b0;font-size:.66rem;font-weight:800;letter-spacing:1px}
+
+/* Process */
+.process{background:linear-gradient(135deg,#061a33,#092a48);color:#fff}
+.process h2{color:#fff}
+.process .section-head p{color:#b9c9d8}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.step{position:relative}
+.step-number{width:48px;height:48px;border:1px solid rgba(0,217,255,.65);border-radius:50%;display:grid;place-items:center;color:var(--cyan);font-weight:800;margin-bottom:16px}
+.step h3{font-size:.9rem;margin-bottom:7px}
+.step p{font-size:.75rem;color:#aebfd0}
+.step:not(:last-child)::after{content:"";position:absolute;top:24px;left:58px;right:-10px;border-top:1px dashed rgba(0,217,255,.35)}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-image{border-radius:12px;overflow:hidden;box-shadow:var(--shadow);min-height:430px}
+.about-image img{width:100%;height:100%;object-fit:cover}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.check{display:flex;gap:11px;font-size:.82rem}
+.check b{color:var(--cyan)}
+.check span{color:var(--muted)}
+
+/* Numbers */
+.numbers{background:var(--navy);color:#fff}
+.numbers-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.number{text-align:center;padding:25px 15px;border-right:1px solid rgba(255,255,255,.09)}
+.number:last-child{border:0}
+.number strong{display:block;color:var(--cyan);font-size:2.1rem;line-height:1.1}
+.number span{font-size:.72rem;color:#b6c5d3}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.project{border-radius:9px;overflow:hidden;background:var(--bg);border:1px solid var(--line)}
+.project-img{height:160px;overflow:hidden}
+.project-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.project:hover img{transform:scale(1.04)}
+.project-body{padding:16px}
+.project h3{font-size:.85rem;color:var(--navy)}
+.project p{font-size:.72rem;color:var(--muted);margin-top:4px}
+
+/* CTA */
+.cta{padding:75px 0;background:linear-gradient(90deg,rgba(5,20,40,.96),rgba(5,20,40,.76)),url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2200&q=85") center/cover;color:#fff}
+.cta-box{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.cta h2{color:#fff;max-width:700px}
+.cta p{color:#b9c8d7;font-size:.85rem;margin-top:8px}
+
+/* Footer */
+footer{background:#041326;color:#fff;padding:65px 0 22px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:45px;padding-bottom:45px}
+.footer-logo{width:190px;margin-bottom:15px}
+.footer p,.footer a{color:#93a5b8;font-size:.78rem}
+.footer-title{color:var(--cyan);font-size:.7rem;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:15px}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:8px}
+.footer-links a:hover{color:#fff}
+.bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;display:flex;justify-content:space-between;color:#64778c;font-size:.68rem}
+
+/* WhatsApp floating */
+.whatsapp{position:fixed;right:20px;bottom:20px;z-index:100;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:28px;box-shadow:0 8px 24px rgba(0,0,0,.2);font-weight:700}
+
+/* Mobile */
+@media(max-width:950px){
+  .nav{display:none}
+  .menu{display:block}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .hero-panel{display:none}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:1fr;gap:25px}
+  .step{display:grid;grid-template-columns:48px 1fr;column-gap:14px}
+  .step-number{grid-row:span 2;margin:0}
+  .step:not(:last-child)::after{display:none}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .container{width:calc(100% - 28px)}
+  .logo{width:165px}
+  .hero{min-height:720px;padding:120px 0 55px}
+  .hero h1{font-size:2.8rem}
+  .section{padding:68px 0}
+  .section-head{display:block}
+  .section-head p{margin-top:15px}
+  .cards,.projects-grid,.footer-grid{grid-template-columns:1fr}
+  .trust-grid,.numbers-grid{grid-template-columns:1fr 1fr}
+  .trust-item{border-right:0;border-bottom:1px solid rgba(255,255,255,.09)}
+  .number{border-right:0;border-bottom:1px solid rgba(255,255,255,.09)}
+  .about-image{min-height:300px}
+  .checks{grid-template-columns:1fr}
+  .cta-box{display:block}
+  .cta .btn{margin-top:22px}
+  .bottom{display:block}
+  .bottom span{display:block;margin-top:6px}
+}
+</style>
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header>
-
-    <div class="container navbar">
-
-        <a href="#home" class="brand">
-            <span class="brand-name">TECNOS PRIME</span>
-            <span class="brand-sub">Tecnologia e Projetos</span>
-        </a>
-
-        <nav>
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#solucoes">Soluções</a>
-                </li>
-
-                <li>
-                    <a href="#processo">Como trabalhamos</a>
-                </li>
-
-                <li>
-                    <a href="#empresa">Empresa</a>
-                </li>
-
-                <li>
-                    <a href="#contato" class="nav-cta">Fale conosco</a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-    </div>
-
+  <div class="container navbar">
+    <a href="#inicio"><img src="logo.png" class="logo" alt="Tecnos Prime — Tecnologia e Projetos"></a>
+    <nav class="nav">
+      <a href="#solucoes">Soluções</a>
+      <a href="#processo">Como trabalhamos</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#empresa">Empresa</a>
+      <a href="#contato" class="cta">Fale conosco</a>
+    </nav>
+    <button class="menu" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+  </div>
+  <div id="mobileNav" style="display:none;background:#061a33;padding:15px 18px;">
+    <a href="#solucoes" onclick="toggleMenu()">Soluções</a><br>
+    <a href="#processo" onclick="toggleMenu()">Como trabalhamos</a><br>
+    <a href="#projetos" onclick="toggleMenu()">Projetos</a><br>
+    <a href="#empresa" onclick="toggleMenu()">Empresa</a><br>
+    <a href="#contato" onclick="toggleMenu()">Contato</a>
+  </div>
 </header>
 
+<main id="inicio">
 
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<main>
-
-<section id="home" class="hero">
-
-    <div class="container hero-grid">
-
-        <div class="hero-content">
-
-            <div class="eyebrow">
-                Tecnologia e Projetos
-            </div>
-
-            <h1>
-                Da necessidade à
-                <span>solução.</span>
-            </h1>
-
-            <p>
-                A Tecnos Prime ajuda empresas a transformar necessidades
-                técnicas em soluções bem especificadas, pesquisadas e
-                prontas para serem implementadas.
-            </p>
-
-            <div class="hero-buttons">
-
-                <!-- SUBSTITUIR PELO NÚMERO REAL DO WHATSAPP -->
-                <a
-                    href="https://wa.me/55SEUNUMERO"
-                    class="btn btn-primary"
-                    target="_blank"
-                    rel="noopener">
-                    Fale conosco
-                </a>
-
-                <a href="#solucoes" class="btn btn-secondary">
-                    Conheça nossas soluções
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="hero-visual">
-
-            <div class="visual-box">
-
-                <div class="visual-label">
-                    Consultoria • Projetos • Soluções
-                </div>
-
-            </div>
-
-        </div>
-
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Tecnologia e Projetos</div>
+      <h1>Da necessidade à <span>solução.</span></h1>
+      <p>Projetos, especificações e soluções tecnológicas pensadas para tornar sua empresa mais eficiente, segura e preparada para o futuro.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://wa.me/55SEUNUMERO" target="_blank">◉ Falar pelo WhatsApp</a>
+        <a class="btn secondary" href="#solucoes">Nossas soluções</a>
+      </div>
     </div>
-
+    <div class="hero-panel">
+      <div class="hero-stat"><strong>360°</strong><span>Visão completa do projeto</span></div>
+      <div class="hero-stat"><strong>B2B</strong><span>Foco em necessidades empresariais</span></div>
+      <div class="hero-stat"><strong>01</strong><span>Projeto dimensionado para cada demanda</span></div>
+      <div class="hero-stat"><strong>∞</strong><span>Possibilidades de aplicação</span></div>
+    </div>
+  </div>
 </section>
 
+<div class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item"><strong>◈ Soluções sob medida</strong><span>Cada projeto é único.</span></div>
+    <div class="trust-item"><strong>◇ Decisões mais seguras</strong><span>Especificação e pesquisa técnica.</span></div>
+    <div class="trust-item"><strong>◌ Foco em resultados</strong><span>Eficiência, desempenho e segurança.</span></div>
+    <div class="trust-item"><strong>◎ Atendimento B2B</strong><span>Empresas de todos os portes.</span></div>
+  </div>
+</div>
 
-<!-- =====================================================
-     INTRO
-===================================================== -->
+<section id="solucoes" class="section solutions">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Nossas soluções</div><h2>Soluções completas para sua empresa</h2></div>
+      <p>Atuamos em diferentes áreas de tecnologia, sempre com o objetivo de entregar projetos eficientes, seguros e alinhados à realidade do seu negócio.</p>
+    </div>
+    <div class="cards">
 
-<section class="intro">
+      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80" alt="Reunião de planejamento"></div><div class="card-body"><span class="card-tag">CONSULTORIA</span><h3>Consultoria Técnica</h3><p>Entendemos sua necessidade e orientamos as melhores decisões tecnológicas.</p></div></article>
 
-    <div class="container intro-content">
+      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Servidores em datacenter"></div><div class="card-body"><span class="card-tag">INFRAESTRUTURA</span><h3>Projetos de TI</h3><p>Projetos completos de infraestrutura de TI, redes, servidores, armazenamento e muito mais.</p></div></article>
 
-        <div class="section-label">
-            O que fazemos
-        </div>
+      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=900&q=80" alt="Datacenter"></div><div class="card-body"><span class="card-tag">DATACENTER</span><h3>Pequenos Datacenters</h3><p>Planejamento e estruturação de ambientes organizados, seguros e escaláveis.</p></div></article>
 
-        <h2>
-            Decisões técnicas melhores começam com as perguntas certas.
-        </h2>
+      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="Sala de reunião corporativa"></div><div class="card-body"><span class="card-tag">AUDIOVISUAL</span><h3>Audiovisual</h3><p>Salas de reunião, auditórios, videowalls, projetores, som e videoconferência.</p></div></article>
 
-        <p>
-            Entendemos o que sua empresa precisa, desenvolvemos a solução,
-            definimos os requisitos técnicos, pesquisamos alternativas e
-            ajudamos você a tomar uma decisão de compra com mais segurança.
-        </p>
+      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=80" alt="Câmeras de segurança"></div><div class="card-body"><span class="card-tag">SEGURANÇA</span><h3>CFTV e Segurança</h3><p>Planejamento de sistemas de monitoramento e segurança eletrônica.</p></div></article>
+
+      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=80" alt="Análise e planejamento"></div><div class="card-body"><span class="card-tag">AQUISIÇÃO</span><h3>Especificação e Aquisição</h3><p>Pesquisa de mercado, comparação técnica e apoio na escolha dos equipamentos.</p></div></article>
 
     </div>
-
+  </div>
 </section>
 
-
-<!-- =====================================================
-     SOLUÇÕES
-===================================================== -->
-
-<section id="solucoes" class="solutions">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div class="section-label">
-                Nossas soluções
-            </div>
-
-            <h2>
-                Projetos pensados para a realidade da sua empresa.
-            </h2>
-
-            <p>
-                Atuamos em diferentes áreas técnicas, sempre de acordo
-                com a necessidade específica de cada projeto.
-            </p>
-
-        </div>
-
-
-        <div class="solutions-grid">
-
-
-            <article class="solution-card">
-
-                <div class="card-number">01</div>
-
-                <h3>
-                    Consultoria Técnica
-                </h3>
-
-                <p>
-                    Análise de necessidades e orientação para empresas
-                    que precisam tomar decisões técnicas ou adquirir
-                    equipamentos e soluções.
-                </p>
-
-            </article>
-
-
-            <article class="solution-card">
-
-                <div class="card-number">02</div>
-
-                <h3>
-                    Projetos de TI
-                </h3>
-
-                <p>
-                    Planejamento de computadores, servidores, redes,
-                    Wi-Fi, armazenamento, nobreaks e infraestrutura
-                    tecnológica.
-                </p>
-
-            </article>
-
-
-            <article class="solution-card">
-
-                <div class="card-number">03</div>
-
-                <h3>
-                    Pequenos Datacenters
-                </h3>
-
-                <p>
-                    Estruturação de ambientes de TI, incluindo racks,
-                    servidores, switches, energia, organização e
-                    infraestrutura necessária.
-                </p>
-
-            </article>
-
-
-            <article class="solution-card">
-
-                <div class="card-number">04</div>
-
-                <h3>
-                    Audiovisual
-                </h3>
-
-                <p>
-                    Projetos para salas de reunião, treinamento,
-                    auditórios, videowalls, projetores, TVs, som e
-                    videoconferência.
-                </p>
-
-            </article>
-
-
-            <article class="solution-card">
-
-                <div class="card-number">05</div>
-
-                <h3>
-                    CFTV e Segurança
-                </h3>
-
-                <p>
-                    Especificação e planejamento de sistemas de
-                    monitoramento e segurança eletrônica adequados
-                    ao ambiente.
-                </p>
-
-            </article>
-
-
-            <article class="solution-card">
-
-                <div class="card-number">06</div>
-
-                <h3>
-                    Especificação e Aquisição
-                </h3>
-
-                <p>
-                    Pesquisa de mercado, comparação de alternativas,
-                    análise técnica e apoio na escolha dos equipamentos
-                    mais adequados.
-                </p>
-
-            </article>
-
-
-        </div>
-
+<section id="processo" class="section process">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Como trabalhamos</div><h2>Um processo simples para resultados melhores</h2></div>
+      <p>Seguimos uma metodologia clara para transformar sua necessidade em uma solução eficiente e confiável.</p>
     </div>
-
+    <div class="steps">
+      <div class="step"><div class="step-number">01</div><div><h3>Entendemos</h3><p>Levantamos a necessidade, objetivos e desafios.</p></div></div>
+      <div class="step"><div class="step-number">02</div><div><h3>Projetamos</h3><p>Desenvolvemos a solução mais adequada para o cenário.</p></div></div>
+      <div class="step"><div class="step-number">03</div><div><h3>Especificamos</h3><p>Definimos requisitos, equipamentos e tecnologias.</p></div></div>
+      <div class="step"><div class="step-number">04</div><div><h3>Pesquisamos</h3><p>Comparamos alternativas e buscamos o melhor custo-benefício.</p></div></div>
+      <div class="step"><div class="step-number">05</div><div><h3>Recomendamos</h3><p>Entregamos uma recomendação objetiva para sua decisão.</p></div></div>
+    </div>
+  </div>
 </section>
 
-
-<!-- =====================================================
-     PROCESSO
-===================================================== -->
-
-<section id="processo" class="process">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <div class="section-label">
-                Nosso processo
-            </div>
-
-            <h2>
-                Uma metodologia simples para decisões mais seguras.
-            </h2>
-
-        </div>
-
-
-        <div class="process-grid">
-
-
-            <div class="process-step">
-
-                <div class="step-number">01</div>
-
-                <div>
-                    <h3>Entendemos</h3>
-
-                    <p>
-                        Levantamos a necessidade e os objetivos.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="process-step">
-
-                <div class="step-number">02</div>
-
-                <div>
-                    <h3>Projetamos</h3>
-
-                    <p>
-                        Desenvolvemos a solução adequada.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="process-step">
-
-                <div class="step-number">03</div>
-
-                <div>
-                    <h3>Especificamos</h3>
-
-                    <p>
-                        Definimos requisitos e equipamentos.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="process-step">
-
-                <div class="step-number">04</div>
-
-                <div>
-                    <h3>Pesquisamos</h3>
-
-                    <p>
-                        Buscamos fornecedores e alternativas.
-                    </p>
-                </div>
-
-            </div>
-
-
-            <div class="process-step">
-
-                <div class="step-number">05</div>
-
-                <div>
-                    <h3>Recomendamos</h3>
-
-                    <p>
-                        Apresentamos a melhor solução.
-                    </p>
-                </div>
-
-            </div>
-
-
-        </div>
-
+<section id="empresa" class="section">
+  <div class="container about-grid">
+    <div class="about-image"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=85" alt="Equipe trabalhando em projeto tecnológico"></div>
+    <div>
+      <div class="eyebrow">Por que Tecnos Prime</div>
+      <h2>Especialistas em tornar tecnologia útil para o seu negócio</h2>
+      <p style="color:var(--muted);margin-top:18px;font-size:.92rem">Nem toda empresa precisa ter uma equipe técnica especializada para cada decisão. A Tecnos Prime entra justamente onde existe uma necessidade que precisa ser entendida, planejada e transformada em uma solução concreta.</p>
+      <div class="checks">
+        <div class="check"><b>✓</b><span><strong>Experiência técnica</strong><br>Conhecimento aplicado a diferentes áreas de tecnologia.</span></div>
+        <div class="check"><b>✓</b><span><strong>Soluções personalizadas</strong><br>Projetos adequados à necessidade e ao orçamento.</span></div>
+        <div class="check"><b>✓</b><span><strong>Foco em segurança</strong><br>Decisões orientadas por desempenho e confiabilidade.</span></div>
+        <div class="check"><b>✓</b><span><strong>Acompanhamento</strong><br>Do início ao fim do projeto, quando contratado.</span></div>
+      </div>
     </div>
-
+  </div>
 </section>
 
-
-<!-- =====================================================
-     EMPRESA
-===================================================== -->
-
-<section id="empresa" class="about">
-
-    <div class="container about-grid">
-
-
-        <div>
-
-            <div class="section-label">
-                Tecnos Prime
-            </div>
-
-            <h2>
-                Conhecimento técnico para decisões de negócio.
-            </h2>
-
-            <p class="about-text">
-                Empresas frequentemente precisam adquirir equipamentos,
-                estruturar ambientes ou desenvolver soluções técnicas
-                sem possuir internamente todo o conhecimento necessário
-                para avaliar as alternativas disponíveis.
-            </p>
-
-            <p class="about-text">
-                A Tecnos Prime atua justamente nesse ponto: transformar
-                necessidades empresariais em projetos e especificações
-                claras, permitindo que nossos clientes tomem decisões
-                com mais segurança.
-            </p>
-
-
-            <ul class="about-list">
-
-                <li>
-                    Soluções dimensionadas para cada necessidade
-                </li>
-
-                <li>
-                    Especificações técnicas objetivas
-                </li>
-
-                <li>
-                    Pesquisa e comparação de alternativas
-                </li>
-
-                <li>
-                    Foco em custo-benefício e adequação técnica
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <div>
-
-            <div class="about-card">
-
-                <strong>01</strong>
-
-                <p>
-                    Um projeto por vez, começando pela necessidade real
-                    do cliente.
-                </p>
-
-            </div>
-
-
-            <div class="about-card">
-
-                <strong>B2B</strong>
-
-                <p>
-                    Soluções desenvolvidas exclusivamente para
-                    necessidades empresariais.
-                </p>
-
-            </div>
-
-
-            <div class="about-card">
-
-                <strong>360°</strong>
-
-                <p>
-                    Da compreensão do problema à recomendação da
-                    solução.
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
+<section class="numbers">
+  <div class="container numbers-grid">
+    <div class="number"><strong>Projetos</strong><span>desenvolvidos sob medida</span></div>
+    <div class="number"><strong>B2B</strong><span>foco no mercado corporativo</span></div>
+    <div class="number"><strong>360°</strong><span>visão da necessidade à solução</span></div>
+    <div class="number"><strong>100%</strong><span>foco em resultados</span></div>
+  </div>
 </section>
 
-
-<!-- =====================================================
-     CTA
-===================================================== -->
-
-<section id="contato" class="cta">
-
-    <div class="container">
-
-        <div class="cta-box">
-
-            <div class="section-label">
-                Vamos conversar
-            </div>
-
-            <h2>
-                Tem uma necessidade ou projeto?
-            </h2>
-
-            <p>
-                Conte-nos o que sua empresa precisa. Avaliamos a demanda
-                e identificamos como podemos ajudar.
-            </p>
-
-            <!-- SUBSTITUIR PELO NÚMERO REAL -->
-            <a
-                href="https://wa.me/55SEUNUMERO"
-                class="btn btn-primary"
-                target="_blank"
-                rel="noopener">
-                Falar pelo WhatsApp
-            </a>
-
-        </div>
-
+<section id="projetos" class="section">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">Projetos</div><h2>Projetos que geram valor</h2></div>
+      <p>Cada projeto é desenvolvido com atenção aos detalhes, visando desempenho, segurança e eficiência.</p>
     </div>
+    <div class="projects-grid">
+      <article class="project"><div class="project-img"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Infraestrutura de TI"></div><div class="project-body"><h3>Infraestrutura de TI</h3><p>Ambientes de TI robustos e escaláveis.</p></div></article>
+      <article class="project"><div class="project-img"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Sala corporativa"></div><div class="project-body"><h3>Salas de Reunião</h3><p>Soluções audiovisuais integradas.</p></div></article>
+      <article class="project"><div class="project-img"><img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80" alt="Sistema de segurança"></div><div class="project-body"><h3>Sistemas de Segurança</h3><p>Monitoramento integrado para proteção.</p></div></article>
+      <article class="project"><div class="project-img"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Rede estruturada"></div><div class="project-body"><h3>Redes Estruturadas</h3><p>Conectividade estável e segura.</p></div></article>
+    </div>
+  </div>
+</section>
 
+<section class="cta" id="contato">
+  <div class="container cta-box">
+    <div><h2>Pronto para transformar sua necessidade em uma solução?</h2><p>Fale com a Tecnos Prime e conte o que sua empresa precisa.</p></div>
+    <a class="btn primary" href="https://wa.me/55SEUNUMERO" target="_blank">◉ Falar pelo WhatsApp</a>
+  </div>
 </section>
 
 </main>
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer>
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-
-            <div>
-
-                <div class="brand">
-
-                    <span class="brand-name">
-                        TECNOS PRIME
-                    </span>
-
-                    <span class="brand-sub">
-                        Tecnologia e Projetos
-                    </span>
-
-                </div>
-
-                <p class="footer-description">
-                    Consultoria, projetos e soluções técnicas
-                    para empresas.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <div class="footer-title">
-                    Soluções
-                </div>
-
-                <ul class="footer-links">
-
-                    <li>
-                        <a href="#solucoes">
-                            Consultoria Técnica
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#solucoes">
-                            Projetos de TI
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#solucoes">
-                            Datacenters
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#solucoes">
-                            Audiovisual
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <div>
-
-                <div class="footer-title">
-                    Contato
-                </div>
-
-                <!-- SUBSTITUIR PELOS DADOS REAIS -->
-
-                <p class="footer-contact">
-                    contato@tecnosprime.com.br
-                </p>
-
-                <p class="footer-contact">
-                    Niterói / RJ
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <span>
-                © 2026 Tecnos Prime. Todos os direitos reservados.
-            </span>
-
-            <span>
-                Tecnologia e Projetos
-            </span>
-
-        </div>
-
+  <div class="container">
+    <div class="footer-grid">
+      <div><img src="logo.png" class="footer-logo" alt="Tecnos Prime"><p>Projetos, especificações e soluções tecnológicas para empresas que buscam eficiência, segurança e resultados.</p></div>
+      <div><div class="footer-title">Navegação</div><ul class="footer-links"><li><a href="#inicio">Início</a></li><li><a href="#solucoes">Soluções</a></li><li><a href="#processo">Como trabalhamos</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#empresa">Empresa</a></li></ul></div>
+      <div><div class="footer-title">Soluções</div><ul class="footer-links"><li><a href="#solucoes">Consultoria Técnica</a></li><li><a href="#solucoes">Projetos de TI</a></li><li><a href="#solucoes">Pequenos Datacenters</a></li><li><a href="#solucoes">Audiovisual</a></li><li><a href="#solucoes">CFTV e Segurança</a></li></ul></div>
+      <div><div class="footer-title">Contato</div><p>contato@tecnosprime.com.br</p><p style="margin-top:8px">Niterói / RJ</p><p style="margin-top:8px">Atendimento B2B</p></div>
     </div>
-
+    <div class="bottom"><span>© 2026 Tecnos Prime. Todos os direitos reservados.</span><span>Tecnologia e Projetos</span></div>
+  </div>
 </footer>
 
+<a class="whatsapp" href="https://wa.me/55SEUNUMERO" target="_blank" aria-label="Falar com a Tecnos Prime pelo WhatsApp">◔</a>
+
+<script>
+function toggleMenu(){
+  const m=document.getElementById('mobileNav');
+  m.style.display=m.style.display==='none'?'block':'none';
+}
+</script>
 
 </body>
 </html>
