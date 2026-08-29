@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Tecnos Prime</title>
+    <style>
+        /* Variáveis de Cores (Identidade Tecnos Prime) */
+        :root {
+            --navy-blue: #0A1931;
+            --cyan: #00A8CC;
+            --white: #FFFFFF;
+            --light-gray: #F7FAFC;
+            --dark-gray: #2D3748;
+            --text-gray: #4A5568;
+        }
+
+        /* Reset e Configurações Básicas */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #E2E8F0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 40px 20px;
+        }
+
+        /* Estilo Base da Página (Slide 16:9) */
+        .page {
+            width: 1280px;
+            height: 720px;
+            background-color: var(--white);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .overlay-dark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(10, 25, 49, 0.95) 0%, rgba(10, 25, 49, 0.5) 100%);
+            z-index: 2;
+        }
+
+        .content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            height: 100%;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Logotipo Textual */
+        .logo {
+            font-size: 24pt;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: -0.5px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .logo span.highlight { color: var(--cyan); }
+        .logo span.sub { font-size: 10pt; font-weight: normal; letter-spacing: 2px; color: #A0AEC0; text-transform: uppercase; }
+
+        .logo.dark { color: var(--navy-blue); }
+        .logo.dark span.sub { color: var(--text-gray); }
+
+        /* Tipografia */
+        h1 { font-size: 3.5rem; font-weight: bold; line-height: 1.1; margin-bottom: 20px; color: var(--white); }
+        h2 { font-size: 2.5rem; font-weight: bold; color: var(--navy-blue); margin-bottom: 15px; }
+        h3 { font-size: 1.8rem; color: var(--cyan); margin-bottom: 10px; }
+        p { font-size: 1.2rem; line-height: 1.6; color: var(--text-gray); }
+        .text-white { color: var(--white) !important; }
+
+        /* PÁGINA 1 */
+        .page-1 .content { justify-content: space-between; }
+        .page-1 .top-bar { display: flex; justify-content: flex-end; }
+        .page-1 .main-text { max-width: 55%; margin-top: auto; margin-bottom: 20px; }
+        .page-1 .main-text ul { list-style: none; margin-bottom: 40px; }
+        .page-1 .main-text li { 
+            font-size: 1.4rem; color: var(--white); margin-bottom: 15px; 
+            padding-left: 20px; border-left: 4px solid var(--cyan);
+        }
+        .page-1 h1 { font-size: 2.5rem; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px; }
+
+        /* PÁGINA 2 & 3 */
+        .page-split { display: flex; flex-direction: row; height: 100%; z-index: 3; position: relative; background: var(--white); }
+        .page-split .image-side { width: 65%; background-color: #E2E8F0; position: relative; background-size: cover; background-position: center; }
+        .page-split .text-side { width: 35%; padding: 60px; display: flex; flex-direction: column; justify-content: center; background-color: var(--light-gray); border-left: 5px solid var(--cyan); }
+        .page-split.reverse .image-side { order: 2; }
+        .page-split.reverse .text-side { order: 1; border-left: none; border-right: 5px solid var(--cyan); }
+
+        /* PÁGINA 4 */
+        .page-4 .content { background: var(--white); }
+        .page-4 .header { margin-bottom: 40px; }
+        .page-4 .grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 20px; height: 380px; margin-bottom: 30px; }
+        .page-4 .grid-item { background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        
+        /* PÁGINA 5 */
+        .page-5 .content { background: var(--light-gray); justify-content: center; align-items: center; text-align: center; }
+        .page-5 .flow-container { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1050px; margin: 60px 0; }
+        .page-5 .step { width: 22%; background: var(--white); padding: 30px 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--cyan); min-height: 220px; display: flex; flex-direction: column; justify-content: center; }
+        .page-5 .step h3 { font-size: 1.5rem; color: var(--navy-blue); margin-bottom: 15px; text-transform: uppercase; }
+        .page-5 .step p { font-size: 1rem; }
+        .page-5 .arrow { font-size: 2.5rem; color: var(--cyan); font-weight: bold; }
+
+        /* PÁGINA 6 */
+        .page-6 .content { justify-content: center; align-items: center; text-align: center; }
+        .page-6 .overlay-dark { background: rgba(10, 25, 49, 0.85); }
+        .page-6 .box { background: rgba(255,255,255,0.05); padding: 60px; border: 1px solid rgba(255,255,255,0.1); border-radius: 15px; backdrop-filter: blur(8px); max-width: 900px; }
+        .page-6 .logo-center { align-items: center; margin-top: 60px; }
+    </style>
+</head>
+<body>
+
+    <!-- PÁGINA 1 -->
+    <div class="page page-1">
+        <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1582653291997-079a1c04e5d1?auto=format&fit=crop&w=1280&q=80');"></div>
+        <div class="overlay-dark"></div>
+        <div class="content">
+            <div class="top-bar">
+                <div class="logo">
+                    <div>TECNOS <span class="highlight">PRIME</span></div>
+                    <span class="sub">Tecnologia e Projetos</span>
+                </div>
+            </div>
+            <div class="main-text">
+                <ul>
+                    <li>Integração de Sistemas Audiovisuais Premium</li>
+                    <li>Soluções de Videoconferência e Colaboração Global</li>
+                    <li>Automação e Controle de Ambiente Centralizado</li>
+                    <li>Videowalls de Alta Resolução para Centros de Comando</li>
+                    <li>Projetos Customizados para Salas de Diretoria</li>
+                </ul>
+                <h1 class="text-white">Tecnologia profissional<br>para transformar ambientes.</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 2 -->
+    <div class="page">
+        <div class="page-split">
+            <div class="image-side" style="background-image: url('https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="text-side">
+                <h2>Uma sala de reunião que impressiona.</h2>
+                <p>Soluções de videoconferência corporativa de alta performance com captação perfeita de áudio e vídeo.</p>
+                <p style="margin-top: 15px;">Reduza custos de viagem e aumente a produtividade com salas desenhadas para colaboração híbrida, garantindo reuniões eficientes e suporte dedicado.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 3 -->
+    <div class="page">
+        <div class="page-split reverse">
+            <div class="image-side" style="background-image: url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80');"></div>
+            <div class="text-side" style="background-color: var(--navy-blue);">
+                <h2 class="text-white">Seu auditório pode ser assim.</h2>
+                <p style="color: #A0AEC0;">Crie eventos memoráveis e apresentações de alto impacto com telas de grande formato e sistemas de som profissional para auditórios corporativos.</p>
+                <p style="color: #A0AEC0; margin-top: 15px;">Projetado para ser intuitivo, flexível e pronto para atender de pequenos treinamentos a grandes convenções com soluções escaláveis e confiáveis.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 4 -->
+    <div class="page page-4">
+        <div class="content">
+            <div class="header">
+                <h2>Tecnologia Acessível</h2>
+                <h3 style="color: var(--text-gray);">Tecnologia que cabe no seu projeto.</h3>
+            </div>
+            <div class="grid">
+                <div class="grid-item" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="grid-item" style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="grid-item" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600&q=80');"></div>
+                <div class="grid-item" style="background-image: url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=600&q=80');"></div>
+            </div>
+            <div style="border-left: 4px solid var(--cyan); padding-left: 20px;">
+                <p style="font-weight: bold; color: var(--navy-blue);">Não importa o tamanho da sua sala ou orçamento, temos soluções integradas que trazem profissionalismo e eficiência para qualquer espaço de trabalho, desde huddle rooms compactos até grandes salas de diretoria executivas.</p>
+                <p>Descubra nossas opções flexíveis e invista apenas no que a sua empresa realmente precisa.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 5 -->
+    <div class="page page-5">
+        <div class="content">
+            <h2 style="margin-bottom: 5px; font-size: 3rem;">Processo</h2>
+            <h3 style="color: var(--text-gray);">Você imagina o ambiente. Nós transformamos a ideia em realidade.</h3>
+            
+            <div class="flow-container">
+                <div class="step">
+                    <h3>1. IDEIA</h3>
+                    <p>Consultoria inicial detalhada para levantamento de necessidades e análise de espaço.</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <h3>2. PROJETO</h3>
+                    <p>Engenharia e design de sistemas customizados com especificações técnicas e orçamentos.</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step">
+                    <h3>3. INSTALAÇÃO</h3>
+                    <p>Execução por equipe técnica certificada para garantir prazos e qualidade superior.</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="step" style="background-color: var(--navy-blue); border-top: none;">
+                    <h3 class="text-white">4. PRONTO</h3>
+                    <p style="color: #A0AEC0;">Ambiente entregue, testado, configurado e pronto para uso pela sua equipe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 6 -->
+    <div class="page page-6">
+        <div class="bg-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1280&q=80');"></div>
+        <div class="overlay-dark"></div>
+        <div class="content">
+            <div class="box">
+                <h1 style="color: var(--cyan); font-size: 4.5rem; margin-bottom: 10px;">Você pode ter.</h1>
+                <h2 class="text-white" style="font-size: 2.2rem; margin-bottom: 30px; font-weight: normal;">Sem precisar gastar uma fortuna.</h2>
+                
+                <p class="text-white" style="font-size: 1.3rem;">Descubra como a integração de sistemas pode ser um investimento inteligente com retorno visível. Oferecemos pacotes de suporte, garantias e manutenção preventiva para garantir a máxima disponibilidade e vida útil dos seus sistemas, sem surpresas no orçamento.</p>
+            </div>
+            
+            <div class="logo logo-center text-white">
+                <div>TECNOS <span class="highlight">PRIME</span></div>
+                <span class="sub" style="color: rgba(255,255,255,0.6);">Tecnologia e Projetos</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
