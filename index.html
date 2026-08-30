@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TECNOS PRIME | Tecnologia e Projetos</title>
+<title>TECNOS PRIME | Tecnologia em Projetos</title>
 <meta name="description" content="Tecnos Prime — consultoria, projetos e soluções tecnológicas para empresas.">
 <meta name="theme-color" content="#071b35">
 <link rel="icon" href="logo.png">
@@ -36,20 +36,46 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,20,40,.9
 .menu{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
 
 /* Hero */
-.hero{min-height:760px;padding:130px 0 70px;display:flex;align-items:center;color:#fff;
-background:linear-gradient(90deg,rgba(3,16,31,.95) 0%,rgba(3,16,31,.72) 48%,rgba(3,16,31,.40) 100%),
-url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2200&q=85") center/cover}
+.hero{
+  min-height:760px;
+  padding:130px 0 70px;
+  display:flex;
+  align-items:center;
+  color:#fff;
+  background:
+    linear-gradient(90deg,rgba(3,16,31,.95) 0%,rgba(3,16,31,.72) 48%,rgba(3,16,31,.40) 100%),
+    url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2200&q=85") center/cover
+}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
 .kicker{color:var(--cyan);text-transform:uppercase;letter-spacing:2.2px;font-size:.72rem;font-weight:800;margin-bottom:18px}
 .hero h1{font-size:clamp(2.8rem,5.5vw,5rem);line-height:1.02;letter-spacing:-2.5px;margin-bottom:22px;max-width:650px}
 .hero h1 span{color:var(--cyan)}
 .hero p{font-size:1.05rem;color:#d4e0eb;max-width:590px;margin-bottom:30px}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:5px;font-size:.85rem;font-weight:700;transition:.25s}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+  padding:13px 20px;
+  border-radius:5px;
+  font-size:.85rem;
+  font-weight:700;
+  transition:.25s
+}
+
+.whatsapp-icon{
+  width:19px;
+  height:19px;
+  flex:none;
+}
+
 .primary{background:var(--cyan);color:var(--navy)}
 .primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,217,255,.2)}
 .secondary{border:1px solid rgba(255,255,255,.5);color:#fff}
 .secondary:hover{border-color:var(--cyan);color:var(--cyan)}
+
 .hero-panel{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .hero-stat{padding:24px;background:rgba(5,20,40,.58);border:1px solid rgba(0,217,255,.18);backdrop-filter:blur(5px);border-radius:9px}
 .hero-stat strong{display:block;color:var(--cyan);font-size:1.7rem;margin-bottom:3px}
@@ -91,10 +117,27 @@ h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.12;letter-spacing:-1.3px;color
 .process .section-head p{color:#b9c9d8}
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
 .step{position:relative}
-.step-number{width:48px;height:48px;border:1px solid rgba(0,217,255,.65);border-radius:50%;display:grid;place-items:center;color:var(--cyan);font-weight:800;margin-bottom:16px}
+.step-number{
+  width:48px;
+  height:48px;
+  border:1px solid rgba(0,217,255,.65);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--cyan);
+  font-weight:800;
+  margin-bottom:16px
+}
 .step h3{font-size:.9rem;margin-bottom:7px}
 .step p{font-size:.75rem;color:#aebfd0}
-.step:not(:last-child)::after{content:"";position:absolute;top:24px;left:58px;right:-10px;border-top:1px dashed rgba(0,217,255,.35)}
+.step:not(:last-child)::after{
+  content:"";
+  position:absolute;
+  top:24px;
+  left:58px;
+  right:-10px;
+  border-top:1px dashed rgba(0,217,255,.35)
+}
 
 /* About */
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
@@ -124,7 +167,13 @@ h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.12;letter-spacing:-1.3px;color
 .project p{font-size:.72rem;color:var(--muted);margin-top:4px}
 
 /* CTA */
-.cta{padding:75px 0;background:linear-gradient(90deg,rgba(5,20,40,.96),rgba(5,20,40,.76)),url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2200&q=85") center/cover;color:#fff}
+.cta{
+  padding:75px 0;
+  background:
+    linear-gradient(90deg,rgba(5,20,40,.96),rgba(5,20,40,.76)),
+    url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2200&q=85") center/cover;
+  color:#fff
+}
 .cta-box{display:flex;align-items:center;justify-content:space-between;gap:30px}
 .cta h2{color:#fff;max-width:700px}
 .cta p{color:#b9c8d7;font-size:.85rem;margin-top:8px}
@@ -141,7 +190,31 @@ footer{background:#041326;color:#fff;padding:65px 0 22px}
 .bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;display:flex;justify-content:space-between;color:#64778c;font-size:.68rem}
 
 /* WhatsApp floating */
-.whatsapp{position:fixed;right:20px;bottom:20px;z-index:100;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:28px;box-shadow:0 8px 24px rgba(0,0,0,.2);font-weight:700}
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:100;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  color:#fff;
+  display:grid;
+  place-items:center;
+  box-shadow:0 8px 24px rgba(0,0,0,.2);
+  transition:.25s;
+}
+
+.whatsapp:hover{
+  transform:translateY(-3px) scale(1.04);
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+.whatsapp .whatsapp-icon{
+  width:31px;
+  height:31px;
+}
 
 /* Mobile */
 @media(max-width:950px){
@@ -157,6 +230,7 @@ footer{background:#041326;color:#fff;padding:65px 0 22px}
   .projects-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:1fr 1fr}
 }
+
 @media(max-width:620px){
   .container{width:calc(100% - 28px)}
   .logo{width:165px}
@@ -183,7 +257,10 @@ footer{background:#041326;color:#fff;padding:65px 0 22px}
 
 <header>
   <div class="container navbar">
-    <a href="#inicio"><img src="logo.png" class="logo" alt="Tecnos Prime — Tecnologia e Projetos"></a>
+    <a href="#inicio">
+      <img src="logo.png" class="logo" alt="Tecnos Prime — Tecnologia em Projetos">
+    </a>
+
     <nav class="nav">
       <a href="#solucoes">Soluções</a>
       <a href="#processo">Como trabalhamos</a>
@@ -191,8 +268,10 @@ footer{background:#041326;color:#fff;padding:65px 0 22px}
       <a href="#empresa">Empresa</a>
       <a href="#contato" class="cta">Fale conosco</a>
     </nav>
+
     <button class="menu" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
   </div>
+
   <div id="mobileNav" style="display:none;background:#061a33;padding:15px 18px;">
     <a href="#solucoes" onclick="toggleMenu()">Soluções</a><br>
     <a href="#processo" onclick="toggleMenu()">Como trabalhamos</a><br>
@@ -207,14 +286,35 @@ footer{background:#041326;color:#fff;padding:65px 0 22px}
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="kicker">Tecnologia e Projetos</div>
+      <div class="kicker">Tecnologia em Projetos</div>
+
       <h1>Da necessidade à <span>solução.</span></h1>
-      <p>Projetos, especificações e soluções tecnológicas pensadas para tornar sua empresa mais eficiente, segura e preparada para o futuro.</p>
+
+      <p>
+        Projetos, especificações e soluções tecnológicas pensadas para tornar
+        sua empresa mais eficiente, segura e preparada para o futuro.
+      </p>
+
       <div class="actions">
-        <a class="btn primary" href="https://wa.me/55SEUNUMERO" target="_blank">◉ Falar pelo WhatsApp</a>
-        <a class="btn secondary" href="#solucoes">Nossas soluções</a>
+
+        <a class="btn primary"
+           href="https://wa.me/55SEUNUMERO"
+           target="_blank">
+
+          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.43ZM12.06 21.83h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.88 9.88 0 0 1-1.52-5.31c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.14 1.03 7.01 2.91a9.87 9.87 0 0 1 2.91 7.03c0 5.47-4.46 9.93-9.94 9.93Zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.74-1.65-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+          </svg>
+
+          Falar pelo WhatsApp
+        </a>
+
+        <a class="btn secondary" href="#solucoes">
+          Nossas soluções
+        </a>
+
       </div>
     </div>
+
     <div class="hero-panel">
       <div class="hero-stat"><strong>360°</strong><span>Visão completa do projeto</span></div>
       <div class="hero-stat"><strong>B2B</strong><span>Foco em necessidades empresariais</span></div>
@@ -235,23 +335,86 @@ footer{background:#041326;color:#fff;padding:65px 0 22px}
 
 <section id="solucoes" class="section solutions">
   <div class="container">
+
     <div class="section-head">
-      <div><div class="eyebrow">Nossas soluções</div><h2>Soluções completas para sua empresa</h2></div>
-      <p>Atuamos em diferentes áreas de tecnologia, sempre com o objetivo de entregar projetos eficientes, seguros e alinhados à realidade do seu negócio.</p>
+      <div>
+        <div class="eyebrow">Nossas soluções</div>
+        <h2>Soluções completas para sua empresa</h2>
+      </div>
+
+      <p>
+        Atuamos em diferentes áreas de tecnologia, sempre com o objetivo de
+        entregar projetos eficientes, seguros e alinhados à realidade do seu negócio.
+      </p>
     </div>
+
     <div class="cards">
 
-      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80" alt="Reunião de planejamento"></div><div class="card-body"><span class="card-tag">CONSULTORIA</span><h3>Consultoria Técnica</h3><p>Entendemos sua necessidade e orientamos as melhores decisões tecnológicas.</p></div></article>
+      <article class="card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80" alt="Reunião de planejamento">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">CONSULTORIA</span>
+          <h3>Consultoria Técnica</h3>
+          <p>Entendemos sua necessidade e orientamos as melhores decisões tecnológicas.</p>
+        </div>
+      </article>
 
-      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Servidores em datacenter"></div><div class="card-body"><span class="card-tag">INFRAESTRUTURA</span><h3>Projetos de TI</h3><p>Projetos completos de infraestrutura de TI, redes, servidores, armazenamento e muito mais.</p></div></article>
+      <article class="card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Rede Wi-Fi profissional">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">CONECTIVIDADE</span>
+          <h3>Projetos de Wi-Fi Profissional</h3>
+          <p>Dimensionamento e implantação de redes Wi-Fi profissionais, estáveis, seguras e preparadas para alta demanda.</p>
+        </div>
+      </article>
 
-      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=900&q=80" alt="Datacenter"></div><div class="card-body"><span class="card-tag">DATACENTER</span><h3>Pequenos Datacenters</h3><p>Planejamento e estruturação de ambientes organizados, seguros e escaláveis.</p></div></article>
+      <article class="card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=900&q=80" alt="Datacenter">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">DATACENTER</span>
+          <h3>Pequenos Datacenters</h3>
+          <p>Planejamento e estruturação de ambientes organizados, seguros e escaláveis.</p>
+        </div>
+      </article>
 
-      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="Sala de reunião corporativa"></div><div class="card-body"><span class="card-tag">AUDIOVISUAL</span><h3>Audiovisual</h3><p>Salas de reunião, auditórios, videowalls, projetores, som e videoconferência.</p></div></article>
+      <article class="card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80" alt="Sala de reunião corporativa">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">AUDIOVISUAL</span>
+          <h3>Audiovisual</h3>
+          <p>Salas de reunião, auditórios, videowalls, projetores, som e videoconferência.</p>
+        </div>
+      </article>
 
-      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=80" alt="Câmeras de segurança"></div><div class="card-body"><span class="card-tag">SEGURANÇA</span><h3>CFTV e Segurança</h3><p>Planejamento de sistemas de monitoramento e segurança eletrônica.</p></div></article>
+      <article class="card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=80" alt="Câmeras de segurança">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">SEGURANÇA</span>
+          <h3>CFTV e Segurança</h3>
+          <p>Planejamento de sistemas de monitoramento e segurança eletrônica.</p>
+        </div>
+      </article>
 
-      <article class="card"><div class="card-image"><img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=80" alt="Análise e planejamento"></div><div class="card-body"><span class="card-tag">AQUISIÇÃO</span><h3>Especificação e Aquisição</h3><p>Pesquisa de mercado, comparação técnica e apoio na escolha dos equipamentos.</p></div></article>
+      <article class="card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=80" alt="Análise e planejamento">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">AQUISIÇÃO</span>
+          <h3>Especificação e Aquisição</h3>
+          <p>Pesquisa de mercado, comparação técnica e apoio na escolha dos equipamentos.</p>
+        </div>
+      </article>
 
     </div>
   </div>
@@ -259,32 +422,117 @@ footer{background:#041326;color:#fff;padding:65px 0 22px}
 
 <section id="processo" class="section process">
   <div class="container">
+
     <div class="section-head">
-      <div><div class="eyebrow">Como trabalhamos</div><h2>Um processo simples para resultados melhores</h2></div>
-      <p>Seguimos uma metodologia clara para transformar sua necessidade em uma solução eficiente e confiável.</p>
+      <div>
+        <div class="eyebrow">Como trabalhamos</div>
+        <h2>Um processo simples para resultados melhores</h2>
+      </div>
+
+      <p>
+        Seguimos uma metodologia clara para transformar sua necessidade em uma
+        solução eficiente e confiável.
+      </p>
     </div>
+
     <div class="steps">
-      <div class="step"><div class="step-number">01</div><div><h3>Entendemos</h3><p>Levantamos a necessidade, objetivos e desafios.</p></div></div>
-      <div class="step"><div class="step-number">02</div><div><h3>Projetamos</h3><p>Desenvolvemos a solução mais adequada para o cenário.</p></div></div>
-      <div class="step"><div class="step-number">03</div><div><h3>Especificamos</h3><p>Definimos requisitos, equipamentos e tecnologias.</p></div></div>
-      <div class="step"><div class="step-number">04</div><div><h3>Pesquisamos</h3><p>Comparamos alternativas e buscamos o melhor custo-benefício.</p></div></div>
-      <div class="step"><div class="step-number">05</div><div><h3>Recomendamos</h3><p>Entregamos uma recomendação objetiva para sua decisão.</p></div></div>
+
+      <div class="step">
+        <div class="step-number">01</div>
+        <div>
+          <h3>Entendemos</h3>
+          <p>Levantamos a necessidade, objetivos e desafios.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">02</div>
+        <div>
+          <h3>Projetamos</h3>
+          <p>Desenvolvemos a solução mais adequada para o cenário.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">03</div>
+        <div>
+          <h3>Especificamos</h3>
+          <p>Definimos requisitos, equipamentos e tecnologias.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">04</div>
+        <div>
+          <h3>Implantamos</h3>
+          <p>Executamos a implantação da solução conforme o projeto.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">05</div>
+        <div>
+          <h3>Treinamos sua equipe</h3>
+          <p>Capacitamos sua equipe para operar e utilizar a solução.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <section id="empresa" class="section">
   <div class="container about-grid">
-    <div class="about-image"><img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=85" alt="Equipe trabalhando em projeto tecnológico"></div>
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=85" alt="Equipe trabalhando em projeto tecnológico">
+    </div>
+
     <div>
       <div class="eyebrow">Por que Tecnos Prime</div>
+
       <h2>Especialistas em tornar tecnologia útil para o seu negócio</h2>
-      <p style="color:var(--muted);margin-top:18px;font-size:.92rem">Nem toda empresa precisa ter uma equipe técnica especializada para cada decisão. A Tecnos Prime entra justamente onde existe uma necessidade que precisa ser entendida, planejada e transformada em uma solução concreta.</p>
+
+      <p style="color:var(--muted);margin-top:18px;font-size:.92rem">
+        Nem toda empresa precisa ter uma equipe técnica especializada para cada decisão.
+        A Tecnos Prime entra justamente onde existe uma necessidade que precisa ser
+        entendida, planejada e transformada em uma solução concreta.
+      </p>
+
       <div class="checks">
-        <div class="check"><b>✓</b><span><strong>Experiência técnica</strong><br>Conhecimento aplicado a diferentes áreas de tecnologia.</span></div>
-        <div class="check"><b>✓</b><span><strong>Soluções personalizadas</strong><br>Projetos adequados à necessidade e ao orçamento.</span></div>
-        <div class="check"><b>✓</b><span><strong>Foco em segurança</strong><br>Decisões orientadas por desempenho e confiabilidade.</span></div>
-        <div class="check"><b>✓</b><span><strong>Acompanhamento</strong><br>Do início ao fim do projeto, quando contratado.</span></div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>
+            <strong>Experiência técnica</strong><br>
+            Conhecimento aplicado a diferentes áreas de tecnologia.
+          </span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>
+            <strong>Soluções personalizadas</strong><br>
+            Projetos adequados à necessidade e ao orçamento.
+          </span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>
+            <strong>Foco em segurança</strong><br>
+            Decisões orientadas por desempenho e confiabilidade.
+          </span>
+        </div>
+
+        <div class="check">
+          <b>✓</b>
+          <span>
+            <strong>Acompanhamento</strong><br>
+            Do início ao fim do projeto, quando contratado.
+          </span>
+        </div>
+
       </div>
     </div>
   </div>
@@ -301,23 +549,84 @@ footer{background:#041326;color:#fff;padding:65px 0 22px}
 
 <section id="projetos" class="section">
   <div class="container">
+
     <div class="section-head">
-      <div><div class="eyebrow">Projetos</div><h2>Projetos que geram valor</h2></div>
-      <p>Cada projeto é desenvolvido com atenção aos detalhes, visando desempenho, segurança e eficiência.</p>
+      <div>
+        <div class="eyebrow">Projetos</div>
+        <h2>Projetos que geram valor</h2>
+      </div>
+
+      <p>
+        Cada projeto é desenvolvido com atenção aos detalhes, visando
+        desempenho, segurança e eficiência.
+      </p>
     </div>
+
     <div class="projects-grid">
-      <article class="project"><div class="project-img"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Infraestrutura de TI"></div><div class="project-body"><h3>Infraestrutura de TI</h3><p>Ambientes de TI robustos e escaláveis.</p></div></article>
-      <article class="project"><div class="project-img"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Sala corporativa"></div><div class="project-body"><h3>Salas de Reunião</h3><p>Soluções audiovisuais integradas.</p></div></article>
-      <article class="project"><div class="project-img"><img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80" alt="Sistema de segurança"></div><div class="project-body"><h3>Sistemas de Segurança</h3><p>Monitoramento integrado para proteção.</p></div></article>
-      <article class="project"><div class="project-img"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Rede estruturada"></div><div class="project-body"><h3>Redes Estruturadas</h3><p>Conectividade estável e segura.</p></div></article>
+
+      <article class="project">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Rede Wi-Fi profissional">
+        </div>
+        <div class="project-body">
+          <h3>Wi-Fi Profissional</h3>
+          <p>Conectividade estável, segura e dimensionada para alta demanda.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Sala corporativa">
+        </div>
+        <div class="project-body">
+          <h3>Salas de Reunião</h3>
+          <p>Soluções audiovisuais integradas.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80" alt="Sistema de segurança">
+        </div>
+        <div class="project-body">
+          <h3>Sistemas de Segurança</h3>
+          <p>Monitoramento integrado para proteção.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-img">
+          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Rede estruturada">
+        </div>
+        <div class="project-body">
+          <h3>Redes Estruturadas</h3>
+          <p>Conectividade estável e segura.</p>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
 
 <section class="cta" id="contato">
   <div class="container cta-box">
-    <div><h2>Pronto para transformar sua necessidade em uma solução?</h2><p>Fale com a Tecnos Prime e conte o que sua empresa precisa.</p></div>
-    <a class="btn primary" href="https://wa.me/55SEUNUMERO" target="_blank">◉ Falar pelo WhatsApp</a>
+
+    <div>
+      <h2>Pronto para transformar sua necessidade em uma solução?</h2>
+      <p>Fale com a Tecnos Prime e conte o que sua empresa precisa.</p>
+    </div>
+
+    <a class="btn primary"
+       href="https://wa.me/55SEUNUMERO"
+       target="_blank">
+
+      <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.43ZM12.06 21.83h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.88 9.88 0 0 1-1.52-5.31c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.14 1.03 7.01 2.91a9.87 9.87 0 0 1 2.91 7.03c0 5.47-4.46 9.93-9.94 9.93Zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.74-1.65-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+      </svg>
+
+      Falar pelo WhatsApp
+    </a>
+
   </div>
 </section>
 
@@ -325,17 +634,66 @@ footer{background:#041326;color:#fff;padding:65px 0 22px}
 
 <footer>
   <div class="container">
+
     <div class="footer-grid">
-      <div><img src="logo.png" class="footer-logo" alt="Tecnos Prime"><p>Projetos, especificações e soluções tecnológicas para empresas que buscam eficiência, segurança e resultados.</p></div>
-      <div><div class="footer-title">Navegação</div><ul class="footer-links"><li><a href="#inicio">Início</a></li><li><a href="#solucoes">Soluções</a></li><li><a href="#processo">Como trabalhamos</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#empresa">Empresa</a></li></ul></div>
-      <div><div class="footer-title">Soluções</div><ul class="footer-links"><li><a href="#solucoes">Consultoria Técnica</a></li><li><a href="#solucoes">Projetos de TI</a></li><li><a href="#solucoes">Pequenos Datacenters</a></li><li><a href="#solucoes">Audiovisual</a></li><li><a href="#solucoes">CFTV e Segurança</a></li></ul></div>
-      <div><div class="footer-title">Contato</div><p>contato@tecnosprime.com.br</p><p style="margin-top:8px">Niterói / RJ</p><p style="margin-top:8px">Atendimento B2B</p></div>
+
+      <div>
+        <img src="logo.png" class="footer-logo" alt="Tecnos Prime">
+        <p>
+          Projetos, especificações e soluções tecnológicas para empresas
+          que buscam eficiência, segurança e resultados.
+        </p>
+      </div>
+
+      <div>
+        <div class="footer-title">Navegação</div>
+        <ul class="footer-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#processo">Como trabalhamos</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#empresa">Empresa</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Soluções</div>
+        <ul class="footer-links">
+          <li><a href="#solucoes">Consultoria Técnica</a></li>
+          <li><a href="#solucoes">Projetos de Wi-Fi Profissional</a></li>
+          <li><a href="#solucoes">Pequenos Datacenters</a></li>
+          <li><a href="#solucoes">Audiovisual</a></li>
+          <li><a href="#solucoes">CFTV e Segurança</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Contato</div>
+        <p>contato@tecnosprime.com.br</p>
+        <p style="margin-top:8px">Niterói / RJ</p>
+        <p style="margin-top:8px">Atendimento B2B</p>
+      </div>
+
     </div>
-    <div class="bottom"><span>© 2026 Tecnos Prime. Todos os direitos reservados.</span><span>Tecnologia e Projetos</span></div>
+
+    <div class="bottom">
+      <span>© 2026 Tecnos Prime. Todos os direitos reservados.</span>
+      <span>Tecnologia em Projetos</span>
+    </div>
+
   </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/55SEUNUMERO" target="_blank" aria-label="Falar com a Tecnos Prime pelo WhatsApp">◔</a>
+<a class="whatsapp"
+   href="https://wa.me/55SEUNUMERO"
+   target="_blank"
+   aria-label="Falar com a Tecnos Prime pelo WhatsApp">
+
+  <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.43ZM12.06 21.83h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.88 9.88 0 0 1-1.52-5.31c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.14 1.03 7.01 2.91a9.87 9.87 0 0 1 2.91 7.03c0 5.47-4.46 9.93-9.94 9.93Zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.74-1.65-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+  </svg>
+
+</a>
 
 <script>
 function toggleMenu(){
