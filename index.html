@@ -1,57 +1,196 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TECNOS PRIME | Tecnologia em Projetos</title>
-<meta name="description" content="Tecnos Prime — consultoria, projetos e soluções tecnológicas para empresas.">
+
+<title>TECNOS PRIME | Wi-Fi Profissional</title>
+
+<meta name="description" content="TECNOS PRIME — projetos e implantação de Wi-Fi Profissional para hotéis, condomínios, escolas, empresas, shoppings, galerias e ambientes de alta demanda.">
+
+<meta name="keywords" content="Wi-Fi profissional, projeto Wi-Fi, Wi-Fi corporativo, Wi-Fi para hotéis, Wi-Fi para condomínios, Wi-Fi para escolas, Wi-Fi empresarial, Wi-Fi para shopping, rede Wi-Fi profissional, Niterói, Rio de Janeiro">
+
 <meta name="theme-color" content="#071b35">
+
 <link rel="icon" href="logo.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
-  --navy:#061a33; --navy2:#0a2949; --cyan:#00d9ff; --blue:#168fd0;
-  --white:#fff; --bg:#f5f8fb; --text:#17263a; --muted:#687789;
-  --line:#dfe7ef; --shadow:0 18px 45px rgba(7,27,53,.10);
+  --navy:#061a33;
+  --navy2:#0a2949;
+  --cyan:#00d9ff;
+  --blue:#168fd0;
+  --white:#fff;
+  --bg:#f5f8fb;
+  --text:#17263a;
+  --muted:#687789;
+  --line:#dfe7ef;
+  --shadow:0 18px 45px rgba(7,27,53,.10);
   --max:1180px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:82px}
-body{font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-.container{width:min(var(--max),calc(100% - 36px));margin:auto}
 
-/* Header */
-header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,20,40,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
-.navbar{height:78px;display:flex;align-items:center;justify-content:space-between}
-.logo{width:190px;height:auto;object-fit:contain;object-position:left center}
-.nav{display:flex;align-items:center;gap:28px;color:#e8f0f7;font-size:.82rem;font-weight:600}
-.nav a{transition:.2s}
-.nav a:hover{color:var(--cyan)}
-.nav .cta{background:var(--cyan);color:var(--navy);padding:10px 17px;border-radius:5px}
-.menu{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
 
-/* Hero */
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:82px
+}
+
+body{
+  font-family:Inter,Arial,sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.6
+}
+
+a{
+  text-decoration:none;
+  color:inherit
+}
+
+img{
+  max-width:100%;
+  display:block
+}
+
+.container{
+  width:min(var(--max),calc(100% - 36px));
+  margin:auto
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:50;
+  background:rgba(5,20,40,.93);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.08)
+}
+
+.navbar{
+  height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.logo{
+  width:190px;
+  height:auto;
+  object-fit:contain;
+  object-position:left center
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:28px;
+  color:#e8f0f7;
+  font-size:.82rem;
+  font-weight:600
+}
+
+.nav a{
+  transition:.2s
+}
+
+.nav a:hover{
+  color:var(--cyan)
+}
+
+.nav .cta{
+  background:var(--cyan);
+  color:var(--navy);
+  padding:10px 17px;
+  border-radius:5px
+}
+
+.menu{
+  display:none;
+  background:none;
+  border:0;
+  color:#fff;
+  font-size:28px;
+  cursor:pointer
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero{
   min-height:760px;
   padding:130px 0 70px;
   display:flex;
   align-items:center;
   color:#fff;
+
   background:
-    linear-gradient(90deg,rgba(3,16,31,.95) 0%,rgba(3,16,31,.72) 48%,rgba(3,16,31,.40) 100%),
-    url("img/sala_reuniao.jpg") center/cover
+    linear-gradient(
+      90deg,
+      rgba(3,16,31,.96) 0%,
+      rgba(3,16,31,.82) 48%,
+      rgba(3,16,31,.48) 100%
+    ),
+    url("img/planta_wi-fi.jpg") center/cover
 }
-.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-.kicker{color:var(--cyan);text-transform:uppercase;letter-spacing:2.2px;font-size:.72rem;font-weight:800;margin-bottom:18px}
-.hero h1{font-size:clamp(2.8rem,5.5vw,5rem);line-height:1.02;letter-spacing:-2.5px;margin-bottom:22px;max-width:650px}
-.hero h1 span{color:var(--cyan)}
-.hero p{font-size:1.05rem;color:#d4e0eb;max-width:590px;margin-bottom:30px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:70px;
+  align-items:center
+}
+
+.kicker{
+  color:var(--cyan);
+  text-transform:uppercase;
+  letter-spacing:2.2px;
+  font-size:.72rem;
+  font-weight:800;
+  margin-bottom:18px
+}
+
+.hero h1{
+  font-size:clamp(2.8rem,5.5vw,5rem);
+  line-height:1.02;
+  letter-spacing:-2.5px;
+  margin-bottom:22px;
+  max-width:720px
+}
+
+.hero h1 span{
+  color:var(--cyan)
+}
+
+.hero p{
+  font-size:1.08rem;
+  color:#d4e0eb;
+  max-width:610px;
+  margin-bottom:30px
+}
+
+.actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap
+}
 
 .btn{
   display:inline-flex;
@@ -68,55 +207,343 @@ header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,20,40,.9
 .whatsapp-icon{
   width:19px;
   height:19px;
-  flex:none;
+  flex:none
 }
 
-.primary{background:var(--cyan);color:var(--navy)}
-.primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,217,255,.2)}
-.secondary{border:1px solid rgba(255,255,255,.5);color:#fff}
-.secondary:hover{border-color:var(--cyan);color:var(--cyan)}
+.primary{
+  background:var(--cyan);
+  color:var(--navy)
+}
 
-.hero-panel{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.hero-stat{padding:24px;background:rgba(5,20,40,.58);border:1px solid rgba(0,217,255,.18);backdrop-filter:blur(5px);border-radius:9px}
-.hero-stat strong{display:block;color:var(--cyan);font-size:1.7rem;margin-bottom:3px}
-.hero-stat span{font-size:.78rem;color:#d7e2ec}
+.primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px rgba(0,217,255,.2)
+}
 
-/* Trust strip */
-.trust{background:var(--navy);color:#fff}
-.trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.trust-item{padding:22px 18px;border-right:1px solid rgba(255,255,255,.09)}
-.trust-item:last-child{border-right:0}
-.trust-item strong{display:block;color:#fff;font-size:.9rem}
-.trust-item span{color:#9fb0c2;font-size:.72rem}
+.secondary{
+  border:1px solid rgba(255,255,255,.5);
+  color:#fff
+}
 
-/* Generic sections */
-section{position:relative}
-.section{padding:92px 0}
-.section-head{display:flex;justify-content:space-between;gap:40px;align-items:end;margin-bottom:40px}
-.section-head > div{max-width:650px}
-.eyebrow{color:#0d91bd;text-transform:uppercase;font-size:.7rem;font-weight:800;letter-spacing:1.7px;margin-bottom:10px}
-h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.12;letter-spacing:-1.3px;color:var(--navy)}
-.section-head p{max-width:420px;color:var(--muted);font-size:.9rem}
+.secondary:hover{
+  border-color:var(--cyan);
+  color:var(--cyan)
+}
 
-/* Solutions */
-.solutions{background:var(--bg)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(7,27,53,.04);transition:.25s}
-.card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#b9d9e5}
-.card-image{height:180px;overflow:hidden}
-.card-image img{width:100%;height:100%;object-fit:cover;transition:.4s}
-.card:hover .card-image img{transform:scale(1.04)}
-.card-body{padding:22px}
-.card-body h3{font-size:1.05rem;color:var(--navy);margin-bottom:7px}
-.card-body p{font-size:.82rem;color:var(--muted)}
-.card-tag{display:inline-block;margin-bottom:12px;color:#0789b0;font-size:.66rem;font-weight:800;letter-spacing:1px}
+.hero-panel{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px
+}
 
-/* Process */
-.process{background:linear-gradient(135deg,#061a33,#092a48);color:#fff}
-.process h2{color:#fff}
-.process .section-head p{color:#b9c9d8}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
-.step{position:relative}
+.hero-stat{
+  padding:24px;
+  background:rgba(5,20,40,.62);
+  border:1px solid rgba(0,217,255,.18);
+  backdrop-filter:blur(5px);
+  border-radius:9px
+}
+
+.hero-stat strong{
+  display:block;
+  color:var(--cyan);
+  font-size:1.55rem;
+  margin-bottom:3px
+}
+
+.hero-stat span{
+  font-size:.78rem;
+  color:#d7e2ec
+}
+
+/* =========================
+   TRUST STRIP
+========================= */
+
+.trust{
+  background:var(--navy);
+  color:#fff
+}
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr)
+}
+
+.trust-item{
+  padding:22px 18px;
+  border-right:1px solid rgba(255,255,255,.09)
+}
+
+.trust-item:last-child{
+  border-right:0
+}
+
+.trust-item strong{
+  display:block;
+  color:#fff;
+  font-size:.88rem
+}
+
+.trust-item span{
+  color:#9fb0c2;
+  font-size:.72rem
+}
+
+/* =========================
+   GENERIC SECTIONS
+========================= */
+
+section{
+  position:relative
+}
+
+.section{
+  padding:92px 0
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  align-items:end;
+  margin-bottom:40px
+}
+
+.section-head > div{
+  max-width:680px
+}
+
+.eyebrow{
+  color:#0d91bd;
+  text-transform:uppercase;
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:1.7px;
+  margin-bottom:10px
+}
+
+h2{
+  font-size:clamp(2rem,4vw,2.8rem);
+  line-height:1.12;
+  letter-spacing:-1.3px;
+  color:var(--navy)
+}
+
+.section-head p{
+  max-width:440px;
+  color:var(--muted);
+  font-size:.9rem
+}
+
+/* =========================
+   PROBLEMA
+========================= */
+
+.problem{
+  background:#fff
+}
+
+.problem-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:65px;
+  align-items:center
+}
+
+.problem-image{
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  min-height:420px
+}
+
+.problem-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover
+}
+
+.problem-list{
+  margin-top:25px;
+  display:grid;
+  gap:15px
+}
+
+.problem-item{
+  display:flex;
+  gap:13px;
+  align-items:flex-start
+}
+
+.problem-icon{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:#e9faff;
+  color:#0789b0;
+  display:grid;
+  place-items:center;
+  font-weight:800;
+  flex:none
+}
+
+.problem-item strong{
+  display:block;
+  color:var(--navy);
+  font-size:.88rem;
+  margin-bottom:2px
+}
+
+.problem-item span{
+  display:block;
+  color:var(--muted);
+  font-size:.78rem
+}
+
+/* =========================
+   SOLUÇÕES
+========================= */
+
+.solutions{
+  background:var(--bg)
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(7,27,53,.04);
+  transition:.25s
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+  border-color:#b9d9e5
+}
+
+.card-image{
+  height:180px;
+  overflow:hidden
+}
+
+.card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s
+}
+
+.card:hover .card-image img{
+  transform:scale(1.04)
+}
+
+.card-body{
+  padding:22px
+}
+
+.card-body h3{
+  font-size:1.05rem;
+  color:var(--navy);
+  margin-bottom:7px
+}
+
+.card-body p{
+  font-size:.82rem;
+  color:var(--muted)
+}
+
+.card-tag{
+  display:inline-block;
+  margin-bottom:12px;
+  color:#0789b0;
+  font-size:.66rem;
+  font-weight:800;
+  letter-spacing:1px
+}
+
+/* =========================
+   SEGMENTOS
+========================= */
+
+.segments{
+  background:#fff
+}
+
+.segment-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px
+}
+
+.segment{
+  padding:25px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:#fff;
+  transition:.25s
+}
+
+.segment:hover{
+  transform:translateY(-3px);
+  border-color:#b9d9e5;
+  box-shadow:0 12px 30px rgba(7,27,53,.07)
+}
+
+.segment-number{
+  color:var(--cyan);
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:12px
+}
+
+.segment h3{
+  color:var(--navy);
+  font-size:.95rem;
+  margin-bottom:6px
+}
+
+.segment p{
+  color:var(--muted);
+  font-size:.76rem
+}
+
+/* =========================
+   PROCESSO
+========================= */
+
+.process{
+  background:linear-gradient(135deg,#061a33,#092a48);
+  color:#fff
+}
+
+.process h2{
+  color:#fff
+}
+
+.process .section-head p{
+  color:#b9c9d8
+}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:18px
+}
+
+.step{
+  position:relative
+}
+
 .step-number{
   width:48px;
   height:48px;
@@ -128,8 +555,17 @@ h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.12;letter-spacing:-1.3px;color
   font-weight:800;
   margin-bottom:16px
 }
-.step h3{font-size:.9rem;margin-bottom:7px}
-.step p{font-size:.75rem;color:#aebfd0}
+
+.step h3{
+  font-size:.9rem;
+  margin-bottom:7px
+}
+
+.step p{
+  font-size:.75rem;
+  color:#aebfd0
+}
+
 .step:not(:last-child)::after{
   content:"";
   position:absolute;
@@ -139,57 +575,229 @@ h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.12;letter-spacing:-1.3px;color
   border-top:1px dashed rgba(0,217,255,.35)
 }
 
-/* About */
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.about-image{border-radius:12px;overflow:hidden;box-shadow:var(--shadow);min-height:430px}
-.about-image img{width:100%;height:100%;object-fit:cover}
-.checks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
-.check{display:flex;gap:11px;font-size:.82rem}
-.check b{color:var(--cyan)}
-.check span{color:var(--muted)}
+/* =========================
+   DIFERENCIAIS
+========================= */
 
-/* Numbers */
-.numbers{background:var(--navy);color:#fff}
-.numbers-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-.number{text-align:center;padding:25px 15px;border-right:1px solid rgba(255,255,255,.09)}
-.number:last-child{border:0}
-.number strong{display:block;color:var(--cyan);font-size:2.1rem;line-height:1.1}
-.number span{font-size:.72rem;color:#b6c5d3}
+.differentials{
+  background:#fff
+}
 
-/* Projects */
-.projects-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.project{border-radius:9px;overflow:hidden;background:var(--bg);border:1px solid var(--line)}
-.project-img{height:160px;overflow:hidden}
-.project-img img{width:100%;height:100%;object-fit:cover;transition:.4s}
-.project:hover img{transform:scale(1.04)}
-.project-body{padding:16px}
-.project h3{font-size:.85rem;color:var(--navy)}
-.project p{font-size:.72rem;color:var(--muted);margin-top:4px}
+.differential-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px
+}
 
-/* CTA */
-.cta{
-  padding:75px 0;
-  background:
-    linear-gradient(90deg,rgba(5,20,40,.96),rgba(5,20,40,.76)),
-    url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2200&q=85") center/cover;
+.differential{
+  padding:28px;
+  border:1px solid var(--line);
+  border-radius:10px
+}
+
+.differential h3{
+  color:var(--navy);
+  font-size:.95rem;
+  margin-bottom:8px
+}
+
+.differential p{
+  color:var(--muted);
+  font-size:.8rem
+}
+
+.differential-icon{
+  color:var(--cyan);
+  font-size:1.4rem;
+  margin-bottom:10px
+}
+
+/* =========================
+   NÚMEROS
+========================= */
+
+.numbers{
+  background:var(--navy);
   color:#fff
 }
-.cta-box{display:flex;align-items:center;justify-content:space-between;gap:30px}
-.cta h2{color:#fff;max-width:700px}
-.cta p{color:#b9c8d7;font-size:.85rem;margin-top:8px}
 
-/* Footer */
-footer{background:#041326;color:#fff;padding:65px 0 22px}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:45px;padding-bottom:45px}
-.footer-logo{width:190px;margin-bottom:15px}
-.footer p,.footer a{color:#93a5b8;font-size:.78rem}
-.footer-title{color:var(--cyan);font-size:.7rem;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:15px}
-.footer-links{list-style:none}
-.footer-links li{margin-bottom:8px}
-.footer-links a:hover{color:#fff}
-.bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:18px;display:flex;justify-content:space-between;color:#64778c;font-size:.68rem}
+.numbers-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr)
+}
 
-/* WhatsApp floating */
+.number{
+  text-align:center;
+  padding:25px 15px;
+  border-right:1px solid rgba(255,255,255,.09)
+}
+
+.number:last-child{
+  border:0
+}
+
+.number strong{
+  display:block;
+  color:var(--cyan);
+  font-size:1.55rem;
+  line-height:1.2
+}
+
+.number span{
+  font-size:.72rem;
+  color:#b6c5d3
+}
+
+/* =========================
+   PROJETOS
+========================= */
+
+.projects{
+  background:var(--bg)
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px
+}
+
+.project{
+  border-radius:9px;
+  overflow:hidden;
+  background:#fff;
+  border:1px solid var(--line)
+}
+
+.project-img{
+  height:160px;
+  overflow:hidden
+}
+
+.project-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.4s
+}
+
+.project:hover img{
+  transform:scale(1.04)
+}
+
+.project-body{
+  padding:16px
+}
+
+.project h3{
+  font-size:.85rem;
+  color:var(--navy)
+}
+
+.project p{
+  font-size:.72rem;
+  color:var(--muted);
+  margin-top:4px
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+  padding:75px 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,20,40,.96),
+      rgba(5,20,40,.76)
+    ),
+    url("img/wi-fi.png") center/cover;
+
+  color:#fff
+}
+
+.cta-box{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px
+}
+
+.cta h2{
+  color:#fff;
+  max-width:700px
+}
+
+.cta p{
+  color:#b9c8d7;
+  font-size:.85rem;
+  margin-top:8px
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#041326;
+  color:#fff;
+  padding:65px 0 22px
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:45px;
+  padding-bottom:45px
+}
+
+.footer-logo{
+  width:190px;
+  margin-bottom:15px
+}
+
+.footer p,
+.footer a{
+  color:#93a5b8;
+  font-size:.78rem
+}
+
+.footer-title{
+  color:var(--cyan);
+  font-size:.7rem;
+  font-weight:800;
+  letter-spacing:1.4px;
+  text-transform:uppercase;
+  margin-bottom:15px
+}
+
+.footer-links{
+  list-style:none
+}
+
+.footer-links li{
+  margin-bottom:8px
+}
+
+.footer-links a:hover{
+  color:#fff
+}
+
+.bottom{
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:18px;
+  display:flex;
+  justify-content:space-between;
+  color:#64778c;
+  font-size:.68rem
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
 .whatsapp{
   position:fixed;
   right:20px;
@@ -203,504 +811,1327 @@ footer{background:#041326;color:#fff;padding:65px 0 22px}
   display:grid;
   place-items:center;
   box-shadow:0 8px 24px rgba(0,0,0,.2);
-  transition:.25s;
+  transition:.25s
 }
 
 .whatsapp:hover{
   transform:translateY(-3px) scale(1.04);
-  box-shadow:0 12px 30px rgba(0,0,0,.25);
+  box-shadow:0 12px 30px rgba(0,0,0,.25)
 }
 
 .whatsapp .whatsapp-icon{
   width:31px;
-  height:31px;
+  height:31px
 }
 
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:950px){
-  .nav{display:none}
-  .menu{display:block}
-  .hero-grid,.about-grid{grid-template-columns:1fr}
-  .hero-panel{display:none}
-  .cards{grid-template-columns:repeat(2,1fr)}
-  .steps{grid-template-columns:1fr;gap:25px}
-  .step{display:grid;grid-template-columns:48px 1fr;column-gap:14px}
-  .step-number{grid-row:span 2;margin:0}
-  .step:not(:last-child)::after{display:none}
-  .projects-grid{grid-template-columns:repeat(2,1fr)}
-  .footer-grid{grid-template-columns:1fr 1fr}
+
+  .nav{
+    display:none
+  }
+
+  .menu{
+    display:block
+  }
+
+  .hero-grid,
+  .problem-grid{
+    grid-template-columns:1fr
+  }
+
+  .hero-panel{
+    display:none
+  }
+
+  .cards{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .segment-grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+    gap:25px
+  }
+
+  .step{
+    display:grid;
+    grid-template-columns:48px 1fr;
+    column-gap:14px
+  }
+
+  .step-number{
+    grid-row:span 2;
+    margin:0
+  }
+
+  .step:not(:last-child)::after{
+    display:none
+  }
+
+  .projects-grid{
+    grid-template-columns:repeat(2,1fr)
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr
+  }
 }
 
 @media(max-width:620px){
-  .container{width:calc(100% - 28px)}
-  .logo{width:165px}
-  .hero{min-height:720px;padding:120px 0 55px}
-  .hero h1{font-size:2.8rem}
-  .section{padding:68px 0}
-  .section-head{display:block}
-  .section-head p{margin-top:15px}
-  .cards,.projects-grid,.footer-grid{grid-template-columns:1fr}
-  .trust-grid,.numbers-grid{grid-template-columns:1fr 1fr}
-  .trust-item{border-right:0;border-bottom:1px solid rgba(255,255,255,.09)}
-  .number{border-right:0;border-bottom:1px solid rgba(255,255,255,.09)}
-  .about-image{min-height:300px}
-  .checks{grid-template-columns:1fr}
-  .cta-box{display:block}
-  .cta .btn{margin-top:22px}
-  .bottom{display:block}
-  .bottom span{display:block;margin-top:6px}
+
+  .container{
+    width:calc(100% - 28px)
+  }
+
+  .logo{
+    width:165px
+  }
+
+  .hero{
+    min-height:720px;
+    padding:120px 0 55px
+  }
+
+  .hero h1{
+    font-size:2.8rem
+  }
+
+  .section{
+    padding:68px 0
+  }
+
+  .section-head{
+    display:block
+  }
+
+  .section-head p{
+    margin-top:15px
+  }
+
+  .cards,
+  .projects-grid,
+  .footer-grid,
+  .segment-grid{
+    grid-template-columns:1fr
+  }
+
+  .differential-grid{
+    grid-template-columns:1fr
+  }
+
+  .trust-grid,
+  .numbers-grid{
+    grid-template-columns:1fr 1fr
+  }
+
+  .trust-item{
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.09)
+  }
+
+  .number{
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.09)
+  }
+
+  .problem-image{
+    min-height:300px
+  }
+
+  .cta-box{
+    display:block
+  }
+
+  .cta .btn{
+    margin-top:22px
+  }
+
+  .bottom{
+    display:block
+  }
+
+  .bottom span{
+    display:block;
+    margin-top:6px
+  }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
   <div class="container navbar">
+
     <a href="#inicio">
-      <img src="logo.png" class="logo" alt="Tecnos Prime — Tecnologia em Projetos">
+      <img
+        src="logo.png"
+        class="logo"
+        alt="Tecnos Prime — Wi-Fi Profissional">
     </a>
 
     <nav class="nav">
+
       <a href="#solucoes">Soluções</a>
+      <a href="#segmentos">Segmentos</a>
       <a href="#processo">Como trabalhamos</a>
       <a href="#projetos">Projetos</a>
       <a href="#empresa">Empresa</a>
-      <a href="#contato" class="cta">Fale conosco</a>
+
+      <a href="#contato" class="cta">
+        Fale conosco
+      </a>
+
     </nav>
 
-    <button class="menu" aria-label="Abrir menu" onclick="toggleMenu()">☰</button>
+    <button
+      class="menu"
+      aria-label="Abrir menu"
+      onclick="toggleMenu()">
+      ☰
+    </button>
+
   </div>
 
-  <div id="mobileNav" style="display:none;background:#061a33;padding:15px 18px;">
+  <div
+    id="mobileNav"
+    style="display:none;background:#061a33;padding:15px 18px;color:#fff;line-height:2.2">
+
     <a href="#solucoes" onclick="toggleMenu()">Soluções</a><br>
+    <a href="#segmentos" onclick="toggleMenu()">Segmentos</a><br>
     <a href="#processo" onclick="toggleMenu()">Como trabalhamos</a><br>
     <a href="#projetos" onclick="toggleMenu()">Projetos</a><br>
     <a href="#empresa" onclick="toggleMenu()">Empresa</a><br>
     <a href="#contato" onclick="toggleMenu()">Contato</a>
+
   </div>
+
 </header>
 
 <main id="inicio">
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="kicker">Tecnologia em Projetos</div>
+<!-- =========================
+     HERO
+========================= -->
 
-      <h1>Da necessidade à <span>solução.</span></h1>
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div>
+
+      <div class="kicker">
+        Wi-Fi Profissional
+      </div>
+
+      <h1>
+        Internet onde as pessoas
+        <span>realmente precisam.</span>
+      </h1>
 
       <p>
-        Projetos, especificações e soluções tecnológicas pensadas para tornar
-        sua empresa mais eficiente, segura e preparada para o futuro.
+        Projetamos e implantamos redes Wi-Fi profissionais para ambientes
+        que precisam de cobertura, estabilidade, capacidade e mobilidade.
       </p>
 
       <div class="actions">
 
-        <a class="btn primary"
-           href="https://wa.me/5521973638771"
-           target="_blank">
+        <a
+          class="btn primary"
+          href="https://wa.me/5521973638771"
+          target="_blank">
 
-          <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <svg class="whatsapp-icon"
+               viewBox="0 0 24 24"
+               fill="currentColor"
+               aria-hidden="true">
+
             <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.43ZM12.06 21.83h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.88 9.88 0 0 1-1.52-5.31c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.14 1.03 7.01 2.91a9.87 9.87 0 0 1 2.91 7.03c0 5.47-4.46 9.93-9.94 9.93Zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.74-1.65-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+
           </svg>
 
           Falar pelo WhatsApp
+
         </a>
 
-        <a class="btn secondary" href="#solucoes">
-          Nossas soluções
+        <a
+          class="btn secondary"
+          href="#solucoes">
+
+          Conheça nossas soluções
+
         </a>
 
       </div>
+
     </div>
 
     <div class="hero-panel">
-      <div class="hero-stat"><strong>360°</strong><span>Visão completa do projeto</span></div>
-      <div class="hero-stat"><strong>B2B</strong><span>Foco em necessidades empresariais</span></div>
-      <div class="hero-stat"><strong>01</strong><span>Projeto dimensionado para cada demanda</span></div>
-      <div class="hero-stat"><strong>∞</strong><span>Possibilidades de aplicação</span></div>
+
+      <div class="hero-stat">
+        <strong>Wi-Fi 6 / 7</strong>
+        <span>Tecnologias atuais para redes de alta capacidade</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>Alta densidade</strong>
+        <span>Mais usuários conectados com desempenho</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>Roaming</strong>
+        <span>Mobilidade entre ambientes sem perder a conexão</span>
+      </div>
+
+      <div class="hero-stat">
+        <strong>Projeto</strong>
+        <span>Dimensionamento conforme o ambiente e a demanda</span>
+      </div>
+
     </div>
+
   </div>
+
 </section>
 
+<!-- =========================
+     TRUST
+========================= -->
+
 <div class="trust">
+
   <div class="container trust-grid">
-    <div class="trust-item"><strong>◈ Soluções sob medida</strong><span>Cada projeto é único.</span></div>
-    <div class="trust-item"><strong>◇ Decisões mais seguras</strong><span>Especificação e pesquisa técnica.</span></div>
-    <div class="trust-item"><strong>◌ Foco em resultados</strong><span>Eficiência, desempenho e segurança.</span></div>
-    <div class="trust-item"><strong>◎ Atendimento B2B</strong><span>Empresas de todos os portes.</span></div>
+
+    <div class="trust-item">
+      <strong>◈ Projeto sob medida</strong>
+      <span>Cada ambiente exige uma solução diferente.</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>◇ Cobertura planejada</strong>
+      <span>Mais sinal onde realmente é necessário.</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>◌ Alta capacidade</strong>
+      <span>Preparado para muitos usuários simultâneos.</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>◎ Atendimento B2B</strong>
+      <span>Projetos para empresas e grandes ambientes.</span>
+    </div>
+
   </div>
+
 </div>
 
+<!-- =========================
+     PROBLEMA
+========================= -->
+
+<section class="section problem">
+
+  <div class="container problem-grid">
+
+    <div class="problem-image">
+
+      <img
+        src="img/wi-fi.png"
+        alt="Rede Wi-Fi profissional">
+
+    </div>
+
+    <div>
+
+      <div class="eyebrow">
+        Seu Wi-Fi está preparado?
+      </div>
+
+      <h2>
+        Wi-Fi profissional não é apenas colocar mais roteadores.
+      </h2>
+
+      <p style="color:var(--muted);margin-top:18px;font-size:.92rem">
+
+        Uma rede profissional precisa ser dimensionada de acordo com
+        o tamanho do ambiente, quantidade de usuários, tipo de utilização,
+        obstáculos físicos e necessidade de mobilidade.
+
+      </p>
+
+      <div class="problem-list">
+
+        <div class="problem-item">
+
+          <div class="problem-icon">✓</div>
+
+          <div>
+            <strong>Cobertura adequada</strong>
+            <span>Reduza áreas sem sinal e pontos de baixa qualidade.</span>
+          </div>
+
+        </div>
+
+        <div class="problem-item">
+
+          <div class="problem-icon">✓</div>
+
+          <div>
+            <strong>Capacidade para muitos usuários</strong>
+            <span>Dimensionamento para ambientes de alta concentração.</span>
+          </div>
+
+        </div>
+
+        <div class="problem-item">
+
+          <div class="problem-icon">✓</div>
+
+          <div>
+            <strong>Mobilidade entre ambientes</strong>
+            <span>Roaming planejado para usuários em movimento.</span>
+          </div>
+
+        </div>
+
+        <div class="problem-item">
+
+          <div class="problem-icon">✓</div>
+
+          <div>
+            <strong>Segurança e controle</strong>
+            <span>Redes organizadas para diferentes perfis de acesso.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     SOLUÇÕES
+========================= -->
+
 <section id="solucoes" class="section solutions">
+
   <div class="container">
 
     <div class="section-head">
+
       <div>
-        <div class="eyebrow">Nossas soluções</div>
-        <h2>Soluções completas para sua empresa</h2>
+
+        <div class="eyebrow">
+          Nossas soluções
+        </div>
+
+        <h2>
+          Wi-Fi projetado para o seu ambiente
+        </h2>
+
       </div>
 
       <p>
-        Atuamos em diferentes áreas de tecnologia, sempre com o objetivo de
-        entregar projetos eficientes, seguros e alinhados à realidade do seu negócio.
+        Da análise inicial à implantação, cuidamos dos principais
+        aspectos necessários para transformar conectividade em uma
+        infraestrutura confiável.
       </p>
+
     </div>
 
     <div class="cards">
 
       <article class="card">
+
         <div class="card-image">
-          <img src="img/consultoria.jpg" alt="Reunião de planejamento">
+          <img
+            src="img/planta_wi-fi.jpg"
+            alt="Projeto de cobertura Wi-Fi">
         </div>
+
         <div class="card-body">
-          <span class="card-tag">CONSULTORIA</span>
-          <h3>Consultoria Técnica</h3>
-          <p>Entendemos sua necessidade e orientamos as melhores decisões tecnológicas.</p>
+
+          <span class="card-tag">
+            PROJETO
+          </span>
+
+          <h3>
+            Dimensionamento de Wi-Fi
+          </h3>
+
+          <p>
+            Análise do ambiente, cobertura, capacidade,
+            quantidade de usuários e posicionamento dos access points.
+          </p>
+
         </div>
+
       </article>
 
       <article class="card">
+
         <div class="card-image">
-          <img src="img/wi-fi.png" alt="Rede Wi-Fi profissional">
+          <img
+            src="img/wi-fi.png"
+            alt="Rede Wi-Fi profissional">
         </div>
+
         <div class="card-body">
-          <span class="card-tag">CONECTIVIDADE</span>
-          <h3>Projetos de Wi-Fi Profissional</h3>
-          <p>Dimensionamento e implantação de redes Wi-Fi profissionais, estáveis, seguras e preparadas para alta demanda.</p>
+
+          <span class="card-tag">
+            IMPLANTAÇÃO
+          </span>
+
+          <h3>
+            Wi-Fi Profissional
+          </h3>
+
+          <p>
+            Implantação de redes Wi-Fi modernas, estáveis,
+            seguras e preparadas para alta demanda.
+          </p>
+
         </div>
+
       </article>
 
       <article class="card">
+
         <div class="card-image">
-          <img src="img/datacenter.jpg" alt="Datacenter">
+          <img
+            src="img/tecnologia.jpg"
+            alt="Tecnologia de rede">
         </div>
+
         <div class="card-body">
-          <span class="card-tag">DATACENTER</span>
-          <h3>Pequenos Datacenters</h3>
-          <p>Planejamento e estruturação de ambientes organizados, seguros e escaláveis.</p>
+
+          <span class="card-tag">
+            ROAMING
+          </span>
+
+          <h3>
+            Mobilidade entre ambientes
+          </h3>
+
+          <p>
+            Estrutura preparada para que usuários possam
+            circular pelo ambiente mantendo a conectividade.
+          </p>
+
         </div>
+
       </article>
 
       <article class="card">
+
         <div class="card-image">
-          <img src="img/sala_reuniao.jpg" alt="Sala de reunião corporativa">
+          <img
+            src="img/sala_reuniao.jpg"
+            alt="Ambiente corporativo conectado">
         </div>
+
         <div class="card-body">
-          <span class="card-tag">AUDIOVISUAL</span>
-          <h3>Audiovisual</h3>
-          <p>Salas de reunião, auditórios, videowalls, projetores, som e videoconferência.</p>
+
+          <span class="card-tag">
+            ALTA DENSIDADE
+          </span>
+
+          <h3>
+            Muitos usuários simultâneos
+          </h3>
+
+          <p>
+            Soluções para locais onde muitas pessoas precisam
+            utilizar a rede ao mesmo tempo.
+          </p>
+
         </div>
+
       </article>
 
       <article class="card">
+
         <div class="card-image">
-          <img src="img/cftv.jpg" alt="Câmeras de segurança">
+          <img
+            src="img/cftv.jpg"
+            alt="Infraestrutura de rede">
         </div>
+
         <div class="card-body">
-          <span class="card-tag">SEGURANÇA</span>
-          <h3>CFTV e Segurança</h3>
-          <p>Planejamento de sistemas de monitoramento e segurança eletrônica.</p>
+
+          <span class="card-tag">
+            SEGURANÇA
+          </span>
+
+          <h3>
+            Redes segmentadas
+          </h3>
+
+          <p>
+            Organização da infraestrutura para separar usuários,
+            visitantes, equipamentos e operações.
+          </p>
+
         </div>
+
       </article>
 
       <article class="card">
+
         <div class="card-image">
-          <img src="img/iluminacao.jpg" alt="Análise e planejamento">
+          <img
+            src="img/iluminacao.jpg"
+            alt="Planejamento de infraestrutura">
         </div>
+
         <div class="card-body">
-          <span class="card-tag">AUTOMAÇÃO</span>
-          <h3>Iluminação e Automação</h3>
-          <p>Pesquisa de mercado, comparação técnica e apoio na escolha dos equipamentos.</p>
+
+          <span class="card-tag">
+            INFRAESTRUTURA
+          </span>
+
+          <h3>
+            Rede preparada para crescer
+          </h3>
+
+          <p>
+            Planejamento considerando expansão, novos ambientes
+            e futuras necessidades de conectividade.
+          </p>
+
         </div>
+
       </article>
 
     </div>
+
   </div>
+
 </section>
 
-<section id="processo" class="section process">
+<!-- =========================
+     SEGMENTOS
+========================= -->
+
+<section id="segmentos" class="section segments">
+
   <div class="container">
 
     <div class="section-head">
+
       <div>
-        <div class="eyebrow">Como trabalhamos</div>
-        <h2>Um processo simples para resultados melhores</h2>
+
+        <div class="eyebrow">
+          Onde atuamos
+        </div>
+
+        <h2>
+          Wi-Fi profissional para diferentes ambientes
+        </h2>
+
       </div>
 
       <p>
-        Seguimos uma metodologia clara para transformar sua necessidade em uma
-        solução eficiente e confiável.
+        Desenvolvemos soluções para ambientes que precisam oferecer
+        conectividade confiável para clientes, visitantes, moradores,
+        alunos, colaboradores e equipes.
       </p>
+
+    </div>
+
+    <div class="segment-grid">
+
+      <article class="segment">
+        <div class="segment-number">01</div>
+        <h3>Hotéis e Pousadas</h3>
+        <p>Wi-Fi para apartamentos, áreas comuns, piscina, restaurante e espaços de lazer.</p>
+      </article>
+
+      <article class="segment">
+        <div class="segment-number">02</div>
+        <h3>Condomínios</h3>
+        <p>Conectividade para áreas comuns, piscina, salão de festas, academia e coworking.</p>
+      </article>
+
+      <article class="segment">
+        <div class="segment-number">03</div>
+        <h3>Escolas e Cursos</h3>
+        <p>Rede para salas de aula, laboratórios, áreas administrativas e ambientes de convivência.</p>
+      </article>
+
+      <article class="segment">
+        <div class="segment-number">04</div>
+        <h3>Empresas e Escritórios</h3>
+        <p>Wi-Fi corporativo para colaboradores, visitantes, salas de reunião e operações.</p>
+      </article>
+
+      <article class="segment">
+        <div class="segment-number">05</div>
+        <h3>Shoppings e Galerias</h3>
+        <p>Conectividade para clientes, lojistas, áreas de circulação e operações.</p>
+      </article>
+
+      <article class="segment">
+        <div class="segment-number">06</div>
+        <h3>Hospitais e Clínicas</h3>
+        <p>Infraestrutura Wi-Fi para ambientes de atendimento, operação e áreas administrativas.</p>
+      </article>
+
+      <article class="segment">
+        <div class="segment-number">07</div>
+        <h3>Academias e Clubes</h3>
+        <p>Wi-Fi para ambientes internos, áreas esportivas, recepção e espaços de convivência.</p>
+      </article>
+
+      <article class="segment">
+        <div class="segment-number">08</div>
+        <h3>Restaurantes e Bares</h3>
+        <p>Conectividade para clientes e operação, com cobertura adequada ao ambiente.</p>
+      </article>
+
+      <article class="segment">
+        <div class="segment-number">09</div>
+        <h3>Coworkings e Centros Empresariais</h3>
+        <p>Redes preparadas para alta densidade e grande quantidade de dispositivos.</p>
+      </article>
+
+      <article class="segment">
+        <div class="segment-number">10</div>
+        <h3>Eventos e Convenções</h3>
+        <p>Infraestrutura para ambientes com concentração elevada de usuários.</p>
+      </article>
+
+      <article class="segment">
+        <div class="segment-number">11</div>
+        <h3>Universidades e Faculdades</h3>
+        <p>Wi-Fi para salas, áreas acadêmicas, bibliotecas e espaços de convivência.</p>
+      </article>
+
+      <article class="segment">
+        <div class="segment-number">12</div>
+        <h3>Outros ambientes corporativos</h3>
+        <p>Projetos personalizados para locais com necessidades específicas de conectividade.</p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     PROCESSO
+========================= -->
+
+<section id="processo" class="section process">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="eyebrow">
+          Como trabalhamos
+        </div>
+
+        <h2>
+          Do diagnóstico à rede funcionando
+        </h2>
+
+      </div>
+
+      <p>
+        Cada projeto segue uma metodologia clara para reduzir
+        problemas de cobertura, capacidade e desempenho.
+      </p>
+
     </div>
 
     <div class="steps">
 
       <div class="step">
-        <div class="step-number">01</div>
-        <div>
-          <h3>Entendemos</h3>
-          <p>Levantamos a necessidade, objetivos e desafios.</p>
+
+        <div class="step-number">
+          01
         </div>
+
+        <div>
+          <h3>Diagnóstico</h3>
+          <p>
+            Entendemos o ambiente, a infraestrutura existente
+            e a necessidade de conectividade.
+          </p>
+        </div>
+
       </div>
 
       <div class="step">
-        <div class="step-number">02</div>
-        <div>
-          <h3>Projetamos</h3>
-          <p>Desenvolvemos a solução mais adequada para o cenário.</p>
+
+        <div class="step-number">
+          02
         </div>
+
+        <div>
+          <h3>Projeto</h3>
+          <p>
+            Dimensionamos cobertura, capacidade e posicionamento
+            dos equipamentos.
+          </p>
+        </div>
+
       </div>
 
       <div class="step">
-        <div class="step-number">03</div>
-        <div>
-          <h3>Especificamos</h3>
-          <p>Definimos requisitos, equipamentos e tecnologias.</p>
+
+        <div class="step-number">
+          03
         </div>
+
+        <div>
+          <h3>Especificação</h3>
+          <p>
+            Definimos equipamentos, infraestrutura e tecnologias
+            adequadas ao projeto.
+          </p>
+        </div>
+
       </div>
 
       <div class="step">
-        <div class="step-number">04</div>
-        <div>
-          <h3>Implantamos</h3>
-          <p>Executamos a implantação da solução conforme o projeto.</p>
+
+        <div class="step-number">
+          04
         </div>
+
+        <div>
+          <h3>Implantação</h3>
+          <p>
+            Instalamos, configuramos e ajustamos a rede conforme
+            o projeto desenvolvido.
+          </p>
+        </div>
+
       </div>
 
       <div class="step">
-        <div class="step-number">05</div>
-        <div>
-          <h3>Treinamos sua equipe</h3>
-          <p>Capacitamos sua equipe para operar e utilizar a solução.</p>
+
+        <div class="step-number">
+          05
         </div>
+
+        <div>
+          <h3>Testes e entrega</h3>
+          <p>
+            Validamos a rede e entregamos o ambiente pronto
+            para utilização.
+          </p>
+        </div>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
-<section id="empresa" class="section">
-  <div class="container about-grid">
+<!-- =========================
+     DIFERENCIAIS
+========================= -->
 
-    <div class="about-image">
-      <img src="img/tecnologia.jpg" alt="Equipe trabalhando em projeto tecnológico">
-    </div>
+<section id="empresa" class="section differentials">
 
-    <div>
-      <div class="eyebrow">Por que Tecnos Prime</div>
-
-      <h2>Especialistas em tornar tecnologia útil para o seu negócio</h2>
-
-      <p style="color:var(--muted);margin-top:18px;font-size:.92rem">
-        Nem toda empresa precisa ter uma equipe técnica especializada para cada decisão.
-        A Tecnos Prime entra justamente onde existe uma necessidade que precisa ser
-        entendida, planejada e transformada em uma solução concreta.
-      </p>
-
-      <div class="checks">
-
-        <div class="check">
-          <b>✓</b>
-          <span>
-            <strong>Experiência técnica</strong><br>
-            Conhecimento aplicado a diferentes áreas de tecnologia.
-          </span>
-        </div>
-
-        <div class="check">
-          <b>✓</b>
-          <span>
-            <strong>Soluções personalizadas</strong><br>
-            Projetos adequados à necessidade e ao orçamento.
-          </span>
-        </div>
-
-        <div class="check">
-          <b>✓</b>
-          <span>
-            <strong>Foco em segurança</strong><br>
-            Decisões orientadas por desempenho e confiabilidade.
-          </span>
-        </div>
-
-        <div class="check">
-          <b>✓</b>
-          <span>
-            <strong>Acompanhamento</strong><br>
-            Do início ao fim do projeto, quando contratado.
-          </span>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="numbers">
-  <div class="container numbers-grid">
-    <div class="number"><strong>Projetos</strong><span>desenvolvidos sob medida</span></div>
-    <div class="number"><strong>B2B</strong><span>foco no mercado corporativo</span></div>
-    <div class="number"><strong>360°</strong><span>visão da necessidade à solução</span></div>
-    <div class="number"><strong>100%</strong><span>foco em resultados</span></div>
-  </div>
-</section>
-
-<section id="projetos" class="section">
   <div class="container">
 
     <div class="section-head">
+
       <div>
-        <div class="eyebrow">Projetos</div>
-        <h2>Projetos que geram valor</h2>
+
+        <div class="eyebrow">
+          Por que Tecnos Prime
+        </div>
+
+        <h2>
+          Wi-Fi tratado como infraestrutura, não como improviso.
+        </h2>
+
       </div>
 
       <p>
-        Cada projeto é desenvolvido com atenção aos detalhes, visando
-        desempenho, segurança e eficiência.
+        A TECNOS PRIME é especializada em transformar a necessidade
+        de conectividade de cada ambiente em um projeto técnico.
       </p>
+
+    </div>
+
+    <div class="differential-grid">
+
+      <div class="differential">
+
+        <div class="differential-icon">◈</div>
+
+        <h3>
+          Especialização em Wi-Fi
+        </h3>
+
+        <p>
+          Nosso foco está na conectividade sem fio profissional,
+          permitindo concentrar conhecimento, equipamentos e metodologia
+          nesse tipo de projeto.
+        </p>
+
+      </div>
+
+      <div class="differential">
+
+        <div class="differential-icon">◇</div>
+
+        <h3>
+          Projeto antes do equipamento
+        </h3>
+
+        <p>
+          A quantidade e o modelo dos equipamentos são definidos
+          a partir da necessidade do ambiente, e não o contrário.
+        </p>
+
+      </div>
+
+      <div class="differential">
+
+        <div class="differential-icon">◌</div>
+
+        <h3>
+          Cobertura e capacidade
+        </h3>
+
+        <p>
+          Consideramos não apenas onde existe sinal, mas também
+          quantas pessoas e dispositivos precisarão utilizar a rede.
+        </p>
+
+      </div>
+
+      <div class="differential">
+
+        <div class="differential-icon">◎</div>
+
+        <h3>
+          Solução adequada ao ambiente
+        </h3>
+
+        <p>
+          Hotéis, condomínios, escolas e empresas possuem necessidades
+          diferentes. O projeto é dimensionado para cada realidade.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     NÚMEROS
+========================= -->
+
+<section class="numbers">
+
+  <div class="container numbers-grid">
+
+    <div class="number">
+      <strong>Wi-Fi 6 / 7</strong>
+      <span>tecnologias para redes modernas</span>
+    </div>
+
+    <div class="number">
+      <strong>Alta densidade</strong>
+      <span>ambientes com muitos usuários</span>
+    </div>
+
+    <div class="number">
+      <strong>Roaming</strong>
+      <span>mobilidade entre ambientes</span>
+    </div>
+
+    <div class="number">
+      <strong>100%</strong>
+      <span>projeto dimensionado para cada ambiente</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     PROJETOS
+========================= -->
+
+<section id="projetos" class="section projects">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="eyebrow">
+          Aplicações
+        </div>
+
+        <h2>
+          Onde o Wi-Fi profissional faz diferença
+        </h2>
+
+      </div>
+
+      <p>
+        Diferentes ambientes exigem diferentes estratégias de cobertura,
+        capacidade, segurança e mobilidade.
+      </p>
+
     </div>
 
     <div class="projects-grid">
 
       <article class="project">
+
         <div class="project-img">
-          <img src="img/planta_wi-fi.jpg" alt="Rede Wi-Fi profissional">
+
+          <img
+            src="img/planta_wi-fi.jpg"
+            alt="Projeto de Wi-Fi">
+
         </div>
+
         <div class="project-body">
-          <h3>Wi-Fi Profissional</h3>
-          <p>Conectividade estável, segura e dimensionada para alta demanda.</p>
+
+          <h3>
+            Grandes áreas
+          </h3>
+
+          <p>
+            Cobertura planejada para múltiplos ambientes.
+          </p>
+
         </div>
+
       </article>
 
       <article class="project">
+
         <div class="project-img">
-          <img src="img/sala_reuniao.jpg" alt="Sala corporativa">
+
+          <img
+            src="img/wi-fi.png"
+            alt="Rede Wi-Fi">
+
         </div>
+
         <div class="project-body">
-          <h3>Salas de Reunião</h3>
-          <p>Soluções audiovisuais integradas.</p>
+
+          <h3>
+            Alta densidade
+          </h3>
+
+          <p>
+            Muitos usuários e dispositivos simultaneamente.
+          </p>
+
         </div>
+
       </article>
 
       <article class="project">
+
         <div class="project-img">
-          <img src="img/cftv.jpg" alt="Sistema de segurança">
+
+          <img
+            src="img/sala_reuniao.jpg"
+            alt="Wi-Fi corporativo">
+
         </div>
+
         <div class="project-body">
-          <h3>Sistemas de Segurança</h3>
-          <p>Monitoramento integrado para proteção.</p>
+
+          <h3>
+            Ambientes corporativos
+          </h3>
+
+          <p>
+            Mobilidade para colaboradores e visitantes.
+          </p>
+
         </div>
+
       </article>
 
       <article class="project">
+
         <div class="project-img">
-          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Rede estruturada">
+
+          <img
+            src="img/tecnologia.jpg"
+            alt="Infraestrutura tecnológica">
+
         </div>
+
         <div class="project-body">
-          <h3>Redes Estruturadas</h3>
-          <p>Conectividade estável e segura.</p>
+
+          <h3>
+            Áreas externas
+          </h3>
+
+          <p>
+            Conectividade em piscinas, jardins e áreas de lazer.
+          </p>
+
         </div>
+
       </article>
 
     </div>
+
   </div>
+
 </section>
 
+<!-- =========================
+     CTA
+========================= -->
+
 <section class="cta" id="contato">
+
   <div class="container cta-box">
 
     <div>
-      <h2>Pronto para transformar sua necessidade em uma solução?</h2>
-      <p>Fale com a Tecnos Prime e conte o que sua empresa precisa.</p>
+
+      <h2>
+        Seu ambiente precisa de um Wi-Fi melhor?
+      </h2>
+
+      <p>
+        Fale com a TECNOS PRIME e descubra como podemos
+        projetar uma rede adequada à sua necessidade.
+      </p>
+
     </div>
 
-    <a class="btn primary"
-       href="https://wa.me/5521973638771"
-       target="_blank">
+    <a
+      class="btn primary"
+      href="https://wa.me/5521973638771"
+      target="_blank">
 
-      <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <svg
+        class="whatsapp-icon"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true">
+
         <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.43ZM12.06 21.83h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.88 9.88 0 0 1-1.52-5.31c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.14 1.03 7.01 2.91a9.87 9.87 0 0 1 2.91 7.03c0 5.47-4.46 9.93-9.94 9.93Zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.74-1.65-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+
       </svg>
 
       Falar pelo WhatsApp
+
     </a>
 
   </div>
+
 </section>
 
 </main>
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
   <div class="container">
 
     <div class="footer-grid">
 
       <div>
-        <img src="logo.png" class="footer-logo" alt="Tecnos Prime">
+
+        <img
+          src="logo.png"
+          class="footer-logo"
+          alt="Tecnos Prime">
+
         <p>
-          Projetos, especificações e soluções tecnológicas para empresas
-          que buscam eficiência, segurança e resultados.
+          Projetos e implantação de Wi-Fi Profissional
+          para empresas e ambientes de alta demanda.
         </p>
+
       </div>
 
       <div>
-        <div class="footer-title">Navegação</div>
+
+        <div class="footer-title">
+          Navegação
+        </div>
+
         <ul class="footer-links">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#solucoes">Soluções</a></li>
-          <li><a href="#processo">Como trabalhamos</a></li>
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#empresa">Empresa</a></li>
+
+          <li>
+            <a href="#inicio">Início</a>
+          </li>
+
+          <li>
+            <a href="#solucoes">Soluções</a>
+          </li>
+
+          <li>
+            <a href="#segmentos">Segmentos</a>
+          </li>
+
+          <li>
+            <a href="#processo">Como trabalhamos</a>
+          </li>
+
+          <li>
+            <a href="#projetos">Aplicações</a>
+          </li>
+
         </ul>
+
       </div>
 
       <div>
-        <div class="footer-title">Soluções</div>
+
+        <div class="footer-title">
+          Soluções
+        </div>
+
         <ul class="footer-links">
-          <li><a href="#solucoes">Consultoria Técnica</a></li>
-          <li><a href="#solucoes">Projetos de Wi-Fi Profissional</a></li>
-          <li><a href="#solucoes">Pequenos Datacenters</a></li>
-          <li><a href="#solucoes">Audiovisual</a></li>
-          <li><a href="#solucoes">CFTV e Segurança</a></li>
+
+          <li>
+            <a href="#solucoes">
+              Dimensionamento de Wi-Fi
+            </a>
+          </li>
+
+          <li>
+            <a href="#solucoes">
+              Wi-Fi Profissional
+            </a>
+          </li>
+
+          <li>
+            <a href="#solucoes">
+              Roaming
+            </a>
+          </li>
+
+          <li>
+            <a href="#solucoes">
+              Alta densidade
+            </a>
+          </li>
+
+          <li>
+            <a href="#solucoes">
+              Redes segmentadas
+            </a>
+          </li>
+
         </ul>
+
       </div>
 
       <div>
-        <div class="footer-title">Contato</div>
-        <p>contato@tecnosprime.com.br</p>
-        <p style="margin-top:8px">Niterói / RJ</p>
-        <p style="margin-top:8px">Atendimento B2B</p>
+
+        <div class="footer-title">
+          Contato
+        </div>
+
+        <p>
+          contato@tecnosprime.com.br
+        </p>
+
+        <p style="margin-top:8px">
+          Niterói / RJ
+        </p>
+
+        <p style="margin-top:8px">
+          Atendimento B2B
+        </p>
+
       </div>
 
     </div>
 
     <div class="bottom">
-      <span>© 2026 Tecnos Prime. Todos os direitos reservados.</span>
-      <span>Tecnologia em Projetos</span>
+
+      <span>
+        © 2026 Tecnos Prime. Todos os direitos reservados.
+      </span>
+
+      <span>
+        Wi-Fi Profissional
+      </span>
+
     </div>
 
   </div>
+
 </footer>
 
-<a class="whatsapp"
-   href="https://wa.me/5521973638771"
-   target="_blank"
-   aria-label="Falar com a Tecnos Prime pelo WhatsApp">
+<!-- =========================
+     WHATSAPP FLUTUANTE
+========================= -->
 
-  <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+<a
+  class="whatsapp"
+  href="https://wa.me/5521973638771"
+  target="_blank"
+  aria-label="Falar com a Tecnos Prime pelo WhatsApp">
+
+  <svg
+    class="whatsapp-icon"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true">
+
     <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L.05 24l6.28-1.65a11.9 11.9 0 0 0 5.73 1.46h.01c6.56 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.43ZM12.06 21.83h-.01a9.9 9.9 0 0 1-5.05-1.38l-.36-.21-3.73.98 1-3.64-.23-.37a9.88 9.88 0 0 1-1.52-5.31c0-5.48 4.46-9.94 9.95-9.94 2.65 0 5.14 1.03 7.01 2.91a9.87 9.87 0 0 1 2.91 7.03c0 5.47-4.46 9.93-9.94 9.93Zm5.45-7.44c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.78-1.48-1.74-1.65-2.03-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+
   </svg>
 
 </a>
 
 <script>
+
 function toggleMenu(){
-  const m=document.getElementById('mobileNav');
-  m.style.display=m.style.display==='none'?'block':'none';
+
+  const m = document.getElementById('mobileNav');
+
+  m.style.display =
+    m.style.display === 'none'
+    ? 'block'
+    : 'none';
+
 }
+
 </script>
 
 </body>
 </html>
+```
